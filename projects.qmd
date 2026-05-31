@@ -1,0 +1,24 @@
+---
+title: "Projects"
+---
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.card}
+## validationcheck
+
+Currenlty working on an R package for automated data validation.
+
+### Features
+
+- Missing value checks
+- Duplicate detection
+- Data quality reports
+
+GitHub Repository [Link]("https://github.com/roy-mwavita0/validationcheck")
+
+:::
+:::
+:::
