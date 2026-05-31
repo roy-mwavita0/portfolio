@@ -2,8 +2,8 @@
     "sortOrder": [
         {
             "columnIndex": 2,
-            "ascending": true
+            "ascending": false
         }
     ],
-    "path": "D:/Personal/Projects/portfolio/_site"
+    "path": "~/My Data Sources"
 }

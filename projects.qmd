@@ -9,7 +9,7 @@ title: "Projects"
 ::: {.card}
 ## validationcheck
 
-Currenlty working on an R package for automated data validation.
+Currently working on an R package for automated data validation.
 
 ### Features
 
