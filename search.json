@@ -1,0 +1,121 @@
+[
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Currently working on an R package for automated data validation.\n\n\n\nMissing value checks\nDuplicate detection\nData quality reports\n\nGitHub Repository Link"
+  },
+  {
+    "objectID": "projects.html#validationcheck",
+    "href": "projects.html#validationcheck",
+    "title": "Projects",
+    "section": "",
+    "text": "Currently working on an R package for automated data validation.\n\n\n\nMissing value checks\nDuplicate detection\nData quality reports\n\nGitHub Repository Link"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Professional Summary",
+    "section": "",
+    "text": "Research Data Analyst | Monitoring & Evaluation Professional | Data Management Specialist\nTransforming data into evidence for decision-making through analytics, visualization, and automation."
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Professional Summary",
+    "section": "👤 About Me",
+    "text": "👤 About Me\nResearch Data Analyst & Monitoring and Evaluation Professional with over three years’ experience in managing, analyzing, and reporting complex datasets across health research, child welfare, and USAID-funded programs.\nSkilled in data management, statistical analysis, program evaluation, dashboard development, data quality assurance, and research reporting.\nExperienced in supporting studies involving 6,500+ beneficiaries, improving reporting efficiency by 40%, reducing manual data validation workload by 60%, and developing automated analytics solutions using R, R-Shiny, SQL, Excel, KoboToolbox, and Power BI.\nMy work focuses on improving data quality, automating reporting systems, and building tools that support evidence-based decision-making in development programs."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Professional Summary",
+    "section": "🎓 Education",
+    "text": "🎓 Education\n\nBachelor of Arts in Sociology – Pwani University, 2016–2021\nFocused on research methods, social systems analysis, and data-driven program evaluation."
+  },
+  {
+    "objectID": "index.html#certifications",
+    "href": "index.html#certifications",
+    "title": "Professional Summary",
+    "section": "📜 Certifications",
+    "text": "📜 Certifications\n\n\nCertificate in Monitoring and Evaluation – Kenya Institute of Management, 2024\n\nCIPIT’s Data Protection – Strathmore University, 2025\nSurvey Data Collection & Analytics – Coursera, 2025\nIBM Data Analyst Professional Certificate – Coursera, 2025\nGCP: Social and Behavioral Research Best Practices – CITI, 2026"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "Professional Summary",
+    "section": "🧠 Skills",
+    "text": "🧠 Skills\n\nData Analysis & Programming - R (tidyverse, Shiny, ggplot2, highcharter) - Data cleaning & transformation - Statistical reporting\nMonitoring & Evaluation - MEAL frameworks - Indicator tracking systems - Data quality assessment\nData Tools - KoboToolbox - Excel advanced analytics - Git & GitHub (basic version control)\nVisualization & Reporting - Interactive dashboards - Quarto reporting - Automated reporting systems"
+  },
+  {
+    "objectID": "index.html#explore-my-work",
+    "href": "index.html#explore-my-work",
+    "title": "Professional Summary",
+    "section": "🚀 Explore My Work",
+    "text": "🚀 Explore My Work\n\n\n\n📊 Dashboards\nInteractive R Shiny dashboards for monitoring program performance and tracking key indicators in real time.\nView Dashboards →\n\n\n\n\n📘 R Toolkit Digest\nA curated series of practical R tutorials and applied data workflows for real-world MEAL and analytics work.\nRead Digest →\n\n\n\n\n📰 Newsletter\nInsights, learning notes, and reflections on data, monitoring, and evaluation practice.\nRead Newsletter →\n\n\n\n\n🧩 Projects\nA collection of data systems, tools, and analytical solutions I have developed.\nView Projects →"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Professional Summary",
+    "section": "📫 Contact",
+    "text": "📫 Contact\n\n\n📍 Kilfi, Kenya\n\n📧 lennicroy@gmail.com\n\n🔗 LinkedIn\n🔗 GitHub\n\n\n  \n    📥 Download CV"
+  },
+  {
+    "objectID": "dashboards.html",
+    "href": "dashboards.html",
+    "title": "Dashboards",
+    "section": "",
+    "text": "Over time, I have developed several interactive dashboards using R (Shiny, bslib, tidyverse, ggplot2, and highcharter) to support Monitoring, Evaluation, Accountability, and Learning (MEAL) functions.\nThese dashboards transform raw program data into interactive insights that support:\n- Real-time decision-making\n- Case management tracking\n- Data quality and performance monitoring\n- Operational reporting and learning\nThe sections below highlight selected dashboards, their purpose, the problem they solved, outcomes, and the tools used."
+  },
+  {
+    "objectID": "dashboards.html#ovc-program-dashboard",
+    "href": "dashboards.html#ovc-program-dashboard",
+    "title": "Dashboards",
+    "section": "📊 OVC Program Dashboard",
+    "text": "📊 OVC Program Dashboard\n\n🔴 Live Dashboard\n\n\n\nProblem Addressed\nData was fragmented across multiple Excel files, making it difficult to track beneficiaries, monitor case management progress, and identify service gaps in real time.\nOutcome Achieved\n⬆️ 65% improvement in real-time visibility of OVC caseload\n⬆️ 50% faster identification of vulnerable households requiring follow-up\n⬆️ Improved data-driven decision-making during monthly review meetings"
+  },
+  {
+    "objectID": "dashboards.html#job-tracker-dashboard",
+    "href": "dashboards.html#job-tracker-dashboard",
+    "title": "Dashboards",
+    "section": "💼 Job Tracker Dashboard",
+    "text": "💼 Job Tracker Dashboard\n\n🔴 Live Dashboard\n\n\nProblem Addressed\nI was not tracking my job applications at all. After applying for multiple roles, I had no structured way of knowing the status of each application or understanding how my applications were performing, especially since I rarely received feedback from employers.\nOutcome Achieved\n⬆️ 70% improvement in application tracking efficiency\n⬆️ 60% reduction in missed follow-ups\n⬆️ Clear visibility of my application pipeline from submission to outcome"
+  },
+  {
+    "objectID": "dashboards.html#case-plan-readiness-achievement-tracker-dashboard",
+    "href": "dashboards.html#case-plan-readiness-achievement-tracker-dashboard",
+    "title": "Dashboards",
+    "section": "💼 Case Plan Readiness Achievement Tracker Dashboard",
+    "text": "💼 Case Plan Readiness Achievement Tracker Dashboard\n\n📊 Dashboard Preview\n\n\n\n\n\n\n\n\n\nProblem Addressed\nThe CPARA assessment data for OVC households was previously difficult to track and interpret in real time, making it challenging for teams to monitor progress, identify gaps, and follow up on case plan achievements effectively.\n\nOutcome Achieved\n⬆️ Improved real-time visibility of household assessment progress\n⬆️ Faster identification of gaps and protection risks\n⬆️ Enhanced data-driven decision-making for CPARA monitoring"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "digest.html",
+    "href": "digest.html",
+    "title": "R Toolkit Digest",
+    "section": "",
+    "text": "A collection of practical lessons learned while working with R for data analysis, visualization, and MEAL systems.\nEach issue breaks down real-world techniques used in reporting, dashboards, and data transformation workflows."
+  },
+  {
+    "objectID": "digest.html#issues",
+    "href": "digest.html#issues",
+    "title": "R Toolkit Digest",
+    "section": "📚 Issues",
+    "text": "📚 Issues\n\n\n\n📊 Issue 1\n\nSmall ggplot2 Tricks That Make Better Charts\nTopics Covered - Grammar of Graphics\n- geom_col()\n- Fill aesthetics\n- position_dodge()\nA practical guide on improving the clarity and visual impact of bar charts in ggplot2.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n📊 Issue 2\n\nUnderstanding pivot_longer() and pivot_wider()\nTopics Covered - Data reshaping in R\n- Wide vs long formats\n- tidyverse workflows\n\nA practical guide on transforming datasets for analysis and visualization.\n\n\n\n  \n    📥 Download PDF"
+  },
+  {
+    "objectID": "newsletter.html",
+    "href": "newsletter.html",
+    "title": "Newsletter",
+    "section": "",
+    "text": "Thoughts on:\n\nResearch\nData Analysis\nMonitoring & Evaluation\nData Visualization\n\n\n📰 Significant Figures\nA collection of insights on data, monitoring, and evaluation practice shared through my LinkedIn newsletter.\n\n  \n    View on LinkedIn"
+  }
+]

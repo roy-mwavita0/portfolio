@@ -1,0 +1,92 @@
+/* =========================
+   GLOBAL CARD STYLE
+========================= */
+.card {
+  border-radius: 16px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 16px;
+  transition: all 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* HEADINGS inside cards */
+.card h3 {
+  color: #008cba;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTONS (YETI PRIMARY)
+========================= */
+button {
+  font-size: 14px;
+  background-color: #008cba;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #006b91;
+}
+
+/* =========================
+   PAGE BACKGROUND
+========================= */
+body {
+  background-color: #f7f9fb;
+}
+
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   LINKS (YETI STYLE)
+========================= */
+a {
+  color: #008cba;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #006b91;
+  text-decoration: underline;
+}
+
+/* =========================
+   IFRAME STYLING
+========================= */
+iframe {
+  border-radius: 12px;
+}
+
+/* =========================
+   TITLE BLOCK (YETI HERO)
+========================= */
+.quarto-title-block {
+  background: linear-gradient(120deg, #008cba, #006b91);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* TITLE TEXT */
+.quarto-title-block h1 {
+  color: white;
+}
+
+/* SUBTITLE TEXT */
+.quarto-title-block p {
+  color: rgba(255,255,255,0.85);
+}
