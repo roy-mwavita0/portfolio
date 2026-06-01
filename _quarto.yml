@@ -5,7 +5,7 @@ website:
   title: "Roy Mwavita"
 
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
 
@@ -22,7 +22,7 @@ website:
         text: Projects
         
   page-footer:
-    center: "© 2026 Roy Mwavita. Built with Quarto"
+    center: "© 2026 Roy Mwavita. Built with Quarto."
 
 
 format:

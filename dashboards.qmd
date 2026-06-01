@@ -11,7 +11,7 @@ These dashboards transform raw program data into interactive insights that suppo
 - Data quality and performance monitoring\
 - Operational reporting and learning
 
-The sections below highlight selected dashboards, their purpose, the problem they solved, outcomes, and the tools used.
+**The sections below highlight selected dashboards, their purpose, the problem they solved, outcomes, and the tools used.**
 
 ---
 
@@ -71,11 +71,13 @@ I was not tracking my job applications at all. After applying for multiple roles
 
 :::
 
+---
+
 ## 💼 Case Plan Readiness Achievement Tracker Dashboard
 
 ::: {.card}
 
-### 📊 Dashboard Preview
+**📊 Dashboard Preview**
 
 ::: {.grid}
 

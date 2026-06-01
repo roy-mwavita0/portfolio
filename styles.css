@@ -75,7 +75,7 @@ iframe {
    TITLE BLOCK (YETI HERO)
 ========================= */
 .quarto-title-block {
-  background: linear-gradient(120deg, #008cba, #006b91);
+  background: linear-gradient(120deg, gray, skyblue);
   color: white;
   padding: 40px;
   border-radius: 12px;

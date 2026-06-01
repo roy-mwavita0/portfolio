@@ -17,7 +17,7 @@ Currently working on an R package for automated data validation.
 - Duplicate detection
 - Data quality reports
 
-GitHub Repository [Link]("https://github.com/roy-mwavita0/validationcheck")
+[GitHub Repository→]("https://github.com/roy-mwavita0/validationcheck")
 
 :::
 :::

@@ -1,52 +1,33 @@
 ---
-title: "Professional Summary"
+title: "Research Data Analyst | M&E Professional"
 format: html
 ---
-
-**Research Data Analyst | Monitoring & Evaluation Professional | Data Management Specialist**
-
-Transforming data into evidence for decision-making through analytics, visualization, and automation.
 
 ---
 
 ## 👤 About Me
 
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.card}
+
 Research Data Analyst & Monitoring and Evaluation Professional with over three years’ experience in managing, analyzing, and reporting complex datasets across health research, child welfare, and USAID-funded programs. 
 
-Skilled in data management, statistical analysis, program evaluation, dashboard development, data quality assurance, and research reporting. 
-
-Experienced in supporting studies involving 6,500+ beneficiaries, improving reporting efficiency by 40%, reducing manual data validation workload by 60%, and developing automated analytics solutions using R, R-Shiny, SQL, Excel, KoboToolbox, and Power BI.  
+Experienced in supporting studies involving 6,500+ beneficiaries, improving reporting efficiency by 40%, reducing manual data validation workload by 60%, and developing automated analytics solutions using R, R-Shiny, Python, Excel, KoboToolbox, and Power BI.  
 
 My work focuses on improving data quality, automating reporting systems, and building tools that support evidence-based decision-making in development programs.
 
----
-
-## 🎓 Education
-
-::: {.card}
-
-### Bachelor of Arts in Sociology – Pwani University, 2016–2021  
-Focused on research methods, social systems analysis, and data-driven program evaluation.
 
 :::
 
----
-
-## 📜 Certifications
-
-::: {.card}
-
-- Certificate in Monitoring and Evaluation – Kenya Institute of Management, 2024  
-- CIPIT’s Data Protection – Strathmore University, 2025
-- Survey Data Collection & Analytics – Coursera, 2025
-- IBM Data Analyst Professional Certificate – Coursera, 2025 
-- GCP: Social and Behavioral Research Best Practices – CITI, 2026  
-
 :::
 
----
+::: {.g-col-12 .g-col-md-6}
 
-## 🧠 Skills
+### 🧠 Skills
 
 ::: {.card}
 
@@ -56,7 +37,7 @@ Focused on research methods, social systems analysis, and data-driven program ev
 - Statistical reporting
 
 **Monitoring & Evaluation**
-- MEAL frameworks
+- M&E frameworks
 - Indicator tracking systems
 - Data quality assessment
 
@@ -67,10 +48,15 @@ Focused on research methods, social systems analysis, and data-driven program ev
 
 **Visualization & Reporting**
 - Interactive dashboards
-- Quarto reporting
+- Quarto & R Markdown reporting
 - Automated reporting systems
 
+
 :::
+:::
+:::
+
+
 
 ---
 
@@ -142,10 +128,9 @@ A collection of data systems, tools, and analytical solutions I have developed.
 
 ::: {.card}
 
-- 📍 Kilfi, Kenya  
 - 📧 lennicroy@gmail.com  
-- 🔗 [LinkedIn]("https://www.linkedin.com/in/roy-mwavita-495b50220/")
-- 🔗 [GitHub]("https://github.com/roy-mwavita0/")
+- 🔗 [LinkedIn→]("https://www.linkedin.com/in/roy-mwavita-495b50220/")
+- 🔗 [GitHub→]("https://github.com/roy-mwavita0/")
 
 ```{=html}
 <a href="files/CV_Roy Mwavita.pdf" target="_blank">
