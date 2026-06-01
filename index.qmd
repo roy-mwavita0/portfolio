@@ -1,6 +1,7 @@
 ---
-title: "Research Data Analyst | M&E Professional"
-format: html
+title: "Roy Mwavita | Data Analyst & M&E Specialist"
+description: "Portfolio of dashboards, R Shiny apps, and monitoring & evaluation projects in public health and development programs."
+image: images/preview.png
 ---
 
 ---
