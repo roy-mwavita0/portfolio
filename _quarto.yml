@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Roy Mwavita"
+  search: false
 
   navbar:
     right:
