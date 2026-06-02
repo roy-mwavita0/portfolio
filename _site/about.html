@@ -130,16 +130,16 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./dashboards.html"> 
 <span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./digest.html"> 
 <span class="menu-text">R Toolkit Digest</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./newsletter.html"> 
@@ -265,7 +265,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/roy-mwavita0\.github\.io\/portfolio\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

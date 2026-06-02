@@ -69,6 +69,20 @@ My work focuses on improving data quality, automating reporting systems, and bui
 
 ::: {.card}
 
+### 🧩 Projects
+
+A collection of data systems, tools, and analytical solutions I have developed.
+
+[View Projects →](projects.qmd)
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+
+::: {.card}
+
 ### 📊 Dashboards
 
 Interactive R Shiny dashboards for monitoring program performance and tracking key indicators in real time.
@@ -102,20 +116,6 @@ A curated series of practical R tutorials and applied data workflows for real-wo
 Insights, learning notes, and reflections on data, monitoring, and evaluation practice.
 
 [Read Newsletter →](newsletter.qmd)
-
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
-
-### 🧩 Projects
-
-A collection of data systems, tools, and analytical solutions I have developed.
-
-[View Projects →](projects.qmd)
 
 :::
 

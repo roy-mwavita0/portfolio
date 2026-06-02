@@ -67,16 +67,12 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Projects – Roy Mwavita">
-<meta property="og:image" content="https://roy-mwavita0.github.io/portfolio/images/chp_kobo.png">
+<meta property="og:image" content="images/chp_kobo.png">
 <meta property="og:site_name" content="Roy Mwavita">
 <meta property="og:image:alt" content="KoboToolbox survey">
-<meta property="og:image:height" content="715">
-<meta property="og:image:width" content="481">
 <meta name="twitter:title" content="Projects – Roy Mwavita">
-<meta name="twitter:image" content="https://roy-mwavita0.github.io/portfolio/images/chp_kobo.png">
+<meta name="twitter:image" content="images/chp_kobo.png">
 <meta name="twitter:image:alt" content="KoboToolbox survey">
-<meta name="twitter:image-height" content="715">
-<meta name="twitter:image-width" content="481">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -101,16 +97,16 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="./dashboards.html"> 
 <span class="menu-text">Dashboards</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./digest.html"> 
 <span class="menu-text">R Toolkit Digest</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
-<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./newsletter.html"> 
@@ -737,7 +733,7 @@ report &lt;- report %&gt;%
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/roy-mwavita0\.github\.io\/portfolio\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
