@@ -19,12 +19,13 @@ website:
 
       - href: digest.qmd
         text: R Toolkit Digest
+        
+      - href: projects.qmd
+        text: Projects
 
       - href: newsletter.qmd
         text: Newsletter
 
-      - href: projects.qmd
-        text: Projects
         
   page-footer:
     center: "© 2026 Roy Mwavita. Built with Quarto."
