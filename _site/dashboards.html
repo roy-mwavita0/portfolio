@@ -68,11 +68,15 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Dashboards – Roy Mwavita">
 <meta property="og:description" content="Data analytics, dashboards, and monitoring &amp; evaluation portfolio">
-<meta property="og:image" content="images/cpara_assessment.png">
+<meta property="og:image" content="https://roy-mwavita0.github.io/portfolio/images/cpara_assessment.png">
 <meta property="og:site_name" content="Roy Mwavita">
+<meta property="og:image:height" content="878">
+<meta property="og:image:width" content="1797">
 <meta name="twitter:title" content="Dashboards – Roy Mwavita">
 <meta name="twitter:description" content="Data analytics, dashboards, and monitoring &amp; evaluation portfolio">
-<meta name="twitter:image" content="images/cpara_assessment.png">
+<meta name="twitter:image" content="https://roy-mwavita0.github.io/portfolio/images/cpara_assessment.png">
+<meta name="twitter:image-height" content="878">
+<meta name="twitter:image-width" content="1797">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -294,7 +298,7 @@ The CPARA assessment data for OVC households was previously difficult to track a
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/roy-mwavita0\.github\.io\/portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

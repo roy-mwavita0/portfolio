@@ -13,6 +13,9 @@ website:
     right:
       - href: index.qmd
         text: Home
+        
+      - href: projects.qmd
+        text: Projects
 
       - href: dashboards.qmd
         text: Dashboards
@@ -20,9 +23,6 @@ website:
       - href: digest.qmd
         text: R Toolkit Digest
         
-      - href: projects.qmd
-        text: Projects
-
       - href: newsletter.qmd
         text: Newsletter
 

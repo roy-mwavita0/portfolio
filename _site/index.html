@@ -69,11 +69,11 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Roy Mwavita | Data Analyst &amp; M&amp;E Specialist – Roy Mwavita">
 <meta property="og:description" content="Portfolio of dashboards, R Shiny apps, and monitoring &amp; evaluation projects in public health and development programs.">
-<meta property="og:image" content="images/preview.png">
+<meta property="og:image" content="https://roy-mwavita0.github.io/portfolio/images/preview.png">
 <meta property="og:site_name" content="Roy Mwavita">
 <meta name="twitter:title" content="Roy Mwavita | Data Analyst &amp; M&amp;E Specialist – Roy Mwavita">
 <meta name="twitter:description" content="Portfolio of dashboards, R Shiny apps, and monitoring &amp; evaluation projects in public health and development programs.">
-<meta name="twitter:image" content="images/preview.png">
+<meta name="twitter:image" content="https://roy-mwavita0.github.io/portfolio/images/preview.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -313,7 +313,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/roy-mwavita0\.github\.io\/portfolio\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
