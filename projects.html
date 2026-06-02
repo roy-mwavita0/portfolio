@@ -67,9 +67,17 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Projects – Roy Mwavita">
+<meta property="og:image" content="https://roy-mwavita0.github.io/portfolio/images/chp_kobo.png">
 <meta property="og:site_name" content="Roy Mwavita">
+<meta property="og:image:alt" content="KoboToolbox survey">
+<meta property="og:image:height" content="715">
+<meta property="og:image:width" content="481">
 <meta name="twitter:title" content="Projects – Roy Mwavita">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://roy-mwavita0.github.io/portfolio/images/chp_kobo.png">
+<meta name="twitter:image:alt" content="KoboToolbox survey">
+<meta name="twitter:image-height" content="715">
+<meta name="twitter:image-width" content="481">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -101,12 +109,12 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <span class="menu-text">R Toolkit Digest</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./newsletter.html"> 
-<span class="menu-text">Newsletter</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link active" href="./projects.html" aria-current="page"> 
 <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./newsletter.html"> 
+<span class="menu-text">Newsletter</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -119,17 +127,8 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#validationcheck" id="toc-validationcheck" class="nav-link active" data-scroll-target="#validationcheck">validationcheck</a>
-  <ul class="collapse">
-  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -153,22 +152,513 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 </header>
 
 
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<section id="validationcheck" class="level2 card">
-<h2 class="anchored" data-anchor-id="validationcheck">validationcheck</h2>
-<p>Currently working on an R package for automated data validation.</p>
-<section id="features" class="level3">
-<h3 class="anchored" data-anchor-id="features">Features</h3>
-<ul>
-<li>Missing value checks</li>
-<li>Duplicate detection</li>
-<li>Data quality reports</li>
-</ul>
-<p><a href="&quot;https://github.com/roy-mwavita0/validationcheck&quot;">GitHub Repository→</a></p>
-</section>
-</section>
+<style>
+  /* Project Grid Styles */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .project-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  }
+
+  .project-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+  }
+
+  .project-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-card button {
+    background: #2c7da0;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+  }
+
+  .project-card button:hover {
+    background: #1f5068;
+  }
+
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    overflow: auto;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 8% auto;
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 16px;
+    width: 85%;
+    max-width: 750px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.2s ease;
+    line-height: 1;
+  }
+
+  .close:hover {
+    color: #000;
+  }
+
+  .modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-right: 30px;
+  }
+
+  .modal-content p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .modal-content ul {
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 1rem 0;
+    border: 1px solid #e0e0e0;
+  }
+
+  .modal-content a {
+    color: #2c7da0;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .modal-content a:hover {
+    text-decoration: underline;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    
+    .modal-content {
+      margin: 15% auto;
+      width: 90%;
+      padding: 1.5rem;
+    }
+  }
+</style>
+
+<script>
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "block";
+      document.body.style.overflow = "hidden"; // Prevent scrolling behind modal
+    }
+  }
+
+  function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = "none";
+      document.body.style.overflow = "auto"; // Restore scrolling
+    }
+  }
+
+  // Close modal when clicking outside the modal content
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+
+  // Close modal with Escape key
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (modal.style.display === 'block') {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+    }
+  });
+</script>
+<div class="project-grid">
+
+  <div class="project-card">
+    <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
+    <p>
+      Geospatial analysis of Community Health Promoter coverage and household
+      distribution using KoboToolbox, R, and Leaflet.
+    </p>
+
+    <button onclick="openModal('chpModal')">
+      Read more →
+    </button>
+  </div>
+
+  <div class="project-card">
+    <h2 class="anchored">🛠️ validationcheck Package</h2>
+    <p>
+      An R package for automated data validation, quality assurance, and
+      reporting in public health and research workflows.
+    </p>
+
+    <button onclick="openModal('pkgModal')">
+      Read more →
+    </button>
+  </div>
+
 </div>
+
+<!-- CHP Modal -->
+<div id="chpModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal('chpModal')">
+      ×
+    </span>
+
+    <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
+
+    <p>
+      <strong>Organization:</strong>
+      Council of Imams and Preachers of Kenya (CIPK) Taita Taveta Branch –
+      USAID TUJITEGEMEE Project
+    </p>
+
+    <p>
+      <strong>Type:</strong>
+      Community Health Systems Strengthening &amp; Geospatial Analysis
+    </p>
+
+    <p>
+      <strong>Tools:</strong>
+      R, Shiny, Leaflet, KoboToolbox, dplyr, Excel
+    </p>
+
+    <hr>
+
+    <h3 class="anchored">🧠 Problem Statement</h3>
+
+    <p>
+      During an OVC household validation exercise, program teams identified
+      challenges related to the geographical distribution of households
+      supported by Community Health Promoters (CHPs). Some CHPs were
+      supporting households located far from their areas of operation,
+      while others experienced overlapping household assignments.
+      These inefficiencies affected case management, follow-up visits,
+      and service delivery.
+    </p>
+
+    <hr>
+
+    <h3 class="anchored">🧪 Methodology</h3>
+
+    <ul>
+      <li>Designed and deployed a KoboToolbox survey to collect CHP geolocation data.</li>
+
+      <li>Integrated household geolocation records collected during beneficiary validation exercises.</li>
+
+      <li>Cleaned and processed data using R.</li>
+
+      <li>Conducted geospatial analysis using Leaflet to map CHP and household locations.</li>
+
+      <li>Identified overlapping coverage areas and household assignment gaps.</li>
+
+      <li>Developed an interactive map to support evidence-based decision making.</li>
+    </ul>
+
+    <hr>
+
+    <h3 class="anchored">🗺️ Project Workflow</h3>
+
+    <div class="workflow-grid">
+
+      <div>
+        <h4 class="anchored">Data Collection</h4>
+
+        <img src="images/chp_kobo.png" alt="KoboToolbox survey" width="100%">
+
+        <p>
+          <em>
+            Geolocation survey developed in KoboToolbox and used to collect
+            Community Health Promoter location data.
+          </em>
+        </p>
+      </div>
+
+      <div>
+        <h4 class="anchored">Analytical Output</h4>
+
+        <img src="images/map_output.png" alt="Geospatial analysis output" width="100%">
+
+        <p>
+          <em>
+            Interactive map showing CHP and household distribution used
+            to identify overlaps and service coverage gaps.
+          </em>
+        </p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <h3 class="anchored">📊 Key Findings</h3>
+
+    <ul>
+      <li>Household assignments were not always aligned with the nearest CHP.</li>
+
+      <li>Several households overlapped across CHP coverage areas.</li>
+
+      <li>Significant variation existed in household distribution among CHPs.</li>
+
+      <li>Distance between CHPs and households affected service delivery efficiency.</li>
+    </ul>
+
+    <hr>
+
+    <h3 class="anchored">🚀 Outcome</h3>
+
+    <ul>
+      <li>Improved visibility of CHP household coverage areas.</li>
+
+      <li>Identified overlapping household assignments and service delivery gaps.</li>
+
+      <li>Supported evidence-based household realignment decisions.</li>
+
+      <li>Strengthened planning and resource allocation for OVC case management.</li>
+
+      <li>Demonstrated the value of geospatial analytics for community health programming.</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<!-- validationcheck Modal -->
+<div id="pkgModal" class="modal">
+
+  <div class="modal-content">
+
+    <span class="close" onclick="closeModal('pkgModal')">
+      ×
+    </span>
+
+    <h2 class="anchored">🛠️ validationcheck: Function-Based Data Validation Framework</h2>
+
+    <p>
+      <strong>Project Type:</strong> R Package for Data Quality Validation
+    </p>
+
+    <p>
+      <strong>Status:</strong> In Development
+    </p>
+
+    <p>
+      <strong>Tools:</strong> R, tidyverse, dplyr, testthat, GitHub
+    </p>
+
+    <hr>
+
+    <h3 class="anchored">🧠 Problem Statement</h3>
+
+    <p>
+      Data validation in real-world monitoring and evaluation workflows is often fragmented,
+      with analysts writing repetitive scripts for missing values, duplicates, invalid ranges,
+      and logical inconsistencies.
+    </p>
+
+    <p>
+      Existing tools such as <strong>pointblank</strong> provide powerful validation pipelines,
+      but they require structured setup and configuration that can slow down rapid exploratory analysis
+      in field-based and MEAL environments.
+    </p>
+
+    <hr>
+
+    <h3 class="anchored">🎯 Solution</h3>
+
+    <p>
+      <strong>validationcheck</strong> introduces a function-based validation system that allows users
+      to define and execute validation rules in a simple, readable pipeline while automatically tracking:
+    </p>
+
+    <ul>
+      <li>Validation summaries</li>
+      <li>Failed records</li>
+      <li>Failure rates</li>
+      <li>Severity classification (GOOD, WARNING, CRITICAL)</li>
+    </ul>
+
+    <hr>
+
+    <h3 class="anchored">⚙️ Core Function: add_validation()</h3>
+
+    <p>
+      The core of the package is the <code>add_validation()</code> function:
+    </p>
+
+    <pre>add_validation(
+  agent,
+  label,
+  columns,
+  rule,
+  preconditions = NULL,
+  check
+)
+    </pre>
+
+    <p>
+      This function allows users to define validation rules in a readable and modular way,
+      without building complex validation pipelines.
+    </p>
+
+    <hr>
+
+    <h3 class="anchored">🧪 Example Workflow</h3>
+
+    <p>Below is a typical validation workflow using <strong>validationcheck</strong>:</p>
+
+    <pre>report &lt;- validate_data(sample_registry)
+
+report &lt;- report %&gt;%
+
+  add_validation(
+    label = "Age Above 24",
+    columns = "age",
+    rule = "Participant age should not exceed 24 years",
+    preconditions =
+      filter(hiv_status == "POSITIVE") %&gt;%
+      distinct(id_number, .keep_all = TRUE),
+    check = greater_than(24)
+  ) %&gt;%
+
+  add_validation(
+    label = "Duplicate IDs",
+    columns = "id_number",
+    rule = "ID numbers should be unique",
+    check = duplicates()
+  )
+    </pre>
+
+    <hr>
+
+    <h3 class="anchored">📊 What This System Produces</h3>
+
+    <p>Each validation check automatically generates:</p>
+
+    <ul>
+      <li>✔ Validation summary per rule</li>
+      <li>✔ List of failed records</li>
+      <li>✔ Failure rate (% of affected rows)</li>
+      <li>✔ Severity classification:</li>
+    </ul>
+
+    <p>
+      <strong>Severity Rules:</strong><br>
+      GOOD: 0% – 2% failure<br>
+      WARNING: 2% – 20% failure<br>
+      CRITICAL: &gt; 20% failure
+    </p>
+    
+    <img src="images/validationcheck.png" alt="Report output" width="100%">
+
+    <hr>
+
+    <h3 class="anchored">⚖️ Comparison with pointblank</h3>
+
+    <ul>
+      <li><strong>pointblank:</strong> Structured, enterprise-grade validation framework</li>
+      <li><strong>validationcheck:</strong> Lightweight, function-first validation system</li>
+      <li>pointblank is ideal for production pipelines</li>
+      <li>validationcheck is optimized for speed and exploratory analysis</li>
+      <li>Reduces setup overhead for field and MEAL workflows</li>
+    </ul>
+
+    <hr>
+
+    <h3 class="anchored">🚀 Expected Impact</h3>
+
+    <ul>
+      <li>Faster dataset validation in field programs</li>
+      <li>Reduced reliance on manual scripts</li>
+      <li>Improved consistency in data quality checks</li>
+      <li>Standardized validation reporting structure</li>
+      <li>Scalable foundation for MEAL data systems</li>
+    </ul>
+
+    <hr>
+
+    <p>
+      <a href="https://github.com/roy-mwavita0/validationcheck" target="_blank">
+        📦 View Package on GitHub →
+      </a>
+    </p>
+
+  </div>
+
 </div>
 
 
