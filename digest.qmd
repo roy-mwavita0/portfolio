@@ -34,7 +34,8 @@ Each issue breaks down real-world techniques used in reporting, dashboards, and 
 ### 📊 Issue 1  
 #### Small ggplot2 Tricks That Make Better Charts
 
-**Topics Covered**
+**Topics Covered:**
+
 - Grammar of Graphics  
 - geom_col()  
 - Fill aesthetics  
@@ -68,7 +69,8 @@ A practical guide on improving the clarity and visual impact of bar charts in gg
 ### 📊 Issue 2  
 #### Understanding pivot_longer() and pivot_wider()
 
-**Topics Covered**
+**Topics Covered:**
+
 - Data reshaping in R\
 - Wide vs long formats\
 - tidyverse workflows\
@@ -86,6 +88,43 @@ A practical guide on transforming datasets for analysis and visualization.
 
 ```{=html}
 <a href="files/reshaping_survey_data.pdf" target="_blank">
+  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
+    📥 Download PDF
+  </button>
+</a>
+
+```
+
+:::
+
+:::
+
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+
+### 📊 Issue 3  
+#### Factors and Ordering Categories in ggplot2
+
+**Topics Covered:**
+
+- Understanding factors in R\
+- Setting and reordering factor levels\
+- Controlling category order in ggplot2\
+- Creating meaningful survey and Likert-scale visualizations
+
+A practical guide to using factors to control how categorical data is displayed in tables, analyses, and ggplot2 visualizations.
+
+```{=html}
+<iframe 
+  src="files/factors_and_ordering_categories.pdf"
+  width="100%" 
+  height="400px"
+  style="border:1px solid #ddd; border-radius:12px;">
+</iframe>
+```
+
+```{=html}
+<a href="files/factors_and_ordering_categories.pdf" target="_blank">
   <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
     📥 Download PDF
   </button>
