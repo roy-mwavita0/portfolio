@@ -74,7 +74,7 @@
     "href": "digest.html#issues",
     "title": "R Toolkit Digest",
     "section": "📚 Issues",
-    "text": "📚 Issues\n\n\n\n📊 Issue 1\n\nSmall ggplot2 Tricks That Make Better Charts\nTopics Covered - Grammar of Graphics\n- geom_col()\n- Fill aesthetics\n- position_dodge()\nA practical guide on improving the clarity and visual impact of bar charts in ggplot2.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n📊 Issue 2\n\nUnderstanding pivot_longer() and pivot_wider()\nTopics Covered - Data reshaping in R\n- Wide vs long formats\n- tidyverse workflows\n\nA practical guide on transforming datasets for analysis and visualization.\n\n\n\n  \n    📥 Download PDF"
+    "text": "📚 Issues\n\n\n\n📊 Issue 1\n\nSmall ggplot2 Tricks That Make Better Charts\nTopics Covered:\n\nGrammar of Graphics\n\ngeom_col()\n\nFill aesthetics\n\nposition_dodge()\n\nA practical guide on improving the clarity and visual impact of bar charts in ggplot2.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n📊 Issue 2\n\nUnderstanding pivot_longer() and pivot_wider()\nTopics Covered:\n\nData reshaping in R\n\nWide vs long formats\n\ntidyverse workflows\n\n\nA practical guide on transforming datasets for analysis and visualization.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n\n📊 Issue 3\n\nFactors and Ordering Categories in ggplot2\nTopics Covered:\n\nUnderstanding factors in R\n\nSetting and reordering factor levels\n\nControlling category order in ggplot2\n\nCreating meaningful survey and Likert-scale visualizations\n\nA practical guide to using factors to control how categorical data is displayed in tables, analyses, and ggplot2 visualizations.\n\n\n\n  \n    📥 Download PDF"
   },
   {
     "objectID": "newsletter.html",
