@@ -8,11 +8,14 @@ website:
   description: "Data analytics, dashboards, and monitoring & evaluation portfolio"
   open-graph: true
   twitter-card: true
+  page-navigation: true
+  back-to-top-navigation: true
+  page-footer: "Copyright 2026, Roy Mwavita. Built with Quarto." 
 
   navbar:
     right:
       - href: index.qmd
-        text: Home
+        text: About Me
         
       - href: projects.qmd
         text: Projects
@@ -27,12 +30,13 @@ website:
         text: Newsletter
 
         
-  page-footer:
-    center: "© 2026 Roy Mwavita. Built with Quarto."
-
 
 format:
   html:
     theme: yeti
     css: styles.css
     toc: true
+    include-in-header:
+      text: |
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">

@@ -1,145 +1,108 @@
 ---
-title: "Roy Mwavita | Data Analyst & M&E Specialist"
-description: "Portfolio of dashboards, R Shiny apps, and monitoring & evaluation projects in public health and development programs."
-image: images/preview.png
+page-layout: full
 ---
 
+::: {.hero-container}
+
+::: {.hero-image}
+![](images/roy.jpg){.profile-img}
+:::
+
+::: {.hero-content}
+
+# Roy Mwavita
+
+```{=html}
+
+<div class="social-links">
+
+<a href="https://github.com/roy-mwavita0"
+   target="_blank"
+   rel="noopener noreferrer">
+   <i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/roy-mwavita-495b50220/"
+   target="_blank"
+   rel="noopener noreferrer">
+   <i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:lennicroy@gmail.com">
+   <i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+```
+
+#### Research Data Analyst • Monitoring & Evaluation Specialist
+3+ experience in turning program data into actionable insights for public health and development programs.
+
+## 🛠️ What I work with
+
+<div class="badges">
+  <span class="badge">R</span>
+  <span class="badge">Shiny</span>
+  <span class="badge">Quarto</span>
+  <span class="badge">KoboToolbox</span>
+  <span class="badge">Python</span>
+  <span class="badge">Power BI</span>
+  <span class="badge">Excel</span>
+  <span class="badge">SQL (basic)</span>
+  <span class="badge">Data Quality Systems</span>
+  <span class="badge">M&E Frameworks</span>
+</div>
+
+<div class="hero-buttons">
+
+[Download CV](files/CV_Roy%20Mwavita.pdf){.btn .btn-secondary target="_blank"}
+
+</div>
+
+:::
+:::
+
 ---
 
-## 👤 About Me
-
+## Featured Areas
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
-
-Research Data Analyst & Monitoring and Evaluation Professional with over three years’ experience in managing, analyzing, and reporting complex datasets across health research, child welfare, and USAID-funded programs. 
-
-Experienced in supporting studies involving 6,500+ beneficiaries, improving reporting efficiency by 40%, reducing manual data validation workload by 60%, and developing automated analytics solutions using R, R-Shiny, Python, Excel, KoboToolbox, and Power BI.  
-
-My work focuses on improving data quality, automating reporting systems, and building tools that support evidence-based decision-making in development programs.
-
-
-:::
-
-:::
-
-::: {.g-col-12 .g-col-md-6}
-
-### 🧠 Skills
-
-::: {.card}
-
-**Data Analysis & Programming**
-- R (tidyverse, Shiny, ggplot2, highcharter)
-- Data cleaning & transformation
-- Statistical reporting
-
-**Monitoring & Evaluation**
-- M&E frameworks
-- Indicator tracking systems
-- Data quality assessment
-
-**Data Tools**
-- KoboToolbox
-- Excel advanced analytics
-- Git & GitHub (basic version control)
-
-**Visualization & Reporting**
-- Interactive dashboards
-- Quarto & R Markdown reporting
-- Automated reporting systems
-
-
-:::
-:::
-:::
-
-
-
----
-
-## 🚀 Explore My Work
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
+::: {.g-col-12 .g-col-md-4}
+::: {.feature-card}
 
 ### 🧩 Projects
 
-A collection of data systems, tools, and analytical solutions I have developed.
+Data systems, automation tools, and analytics solutions developed for health and development programs.
 
-[View Projects →](projects.qmd)
-
-:::
+[Explore →](projects.qmd)
 
 :::
+:::
 
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
+::: {.g-col-12 .g-col-md-4}
+::: {.feature-card}
 
 ### 📊 Dashboards
 
-Interactive R Shiny dashboards for monitoring program performance and tracking key indicators in real time.
+Interactive Shiny applications for program monitoring, data quality assessment, and performance tracking.
 
-[View Dashboards →](dashboards.qmd)
-
-:::
+[Explore →](dashboards.qmd)
 
 :::
+:::
 
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
+::: {.g-col-12 .g-col-md-4}
+::: {.feature-card}
 
 ### 📘 R Toolkit Digest
 
-A curated series of practical R tutorials and applied data workflows for real-world MEAL and analytics work.
+Practical R programming tutorials focused on real-world MEAL and analytics workflows.
 
-[Read Digest →](digest.qmd)
-
-:::
+[Explore →](digest.qmd)
 
 :::
-
-::: {.g-col-12 .g-col-md-6}
-
-::: {.card}
-
-### 📰 Newsletter
-
-Insights, learning notes, and reflections on data, monitoring, and evaluation practice.
-
-[Read Newsletter →](newsletter.qmd)
-
 :::
-
-:::
-
-:::
-
----
-
-## 📫 Contact
-
-::: {.card}
-
-- 📧 lennicroy@gmail.com  
-- 🔗 [LinkedIn→]("https://www.linkedin.com/in/roy-mwavita-495b50220/")
-- 🔗 [GitHub→]("https://github.com/roy-mwavita0/")
-
-```{=html}
-<a href="files/CV_Roy Mwavita.pdf" target="_blank">
-  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
-    📥 Download CV
-  </button>
-</a>
-
-```
 
 :::

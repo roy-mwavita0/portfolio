@@ -74,16 +74,17 @@ iframe {
 /* =========================
    TITLE BLOCK (YETI HERO)
 ========================= */
-.quarto-title-block {
+
+/* .quarto-title-block {
   background: linear-gradient(120deg, gray, skyblue);
   color: white;
   padding: 40px;
   border-radius: 12px;
-}
+}*/
 
 /* TITLE TEXT */
 .quarto-title-block h1 {
-  color: white;
+  color: black;
 }
 
 /* SUBTITLE TEXT */
@@ -113,4 +114,169 @@ iframe {
   .workflow-grid {
     grid-template-columns: 1fr;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------ */
+
+/* HERO SECTION */
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+.hero-image {
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  margin-bottom: 0.2rem;
+  font-size: 2.8rem;
+}
+
+.hero-content h3 {
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.social-links {
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.hero-buttons {
+  margin-top: 1.5rem;
+}
+
+/* FEATURE CARDS */
+
+.feature-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  transition: all .2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links a {
+    margin: 0 0.5rem;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+
+
+/*------ */
+
+.social-links a {
+  font-size: 1.4rem;
+  margin-right: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+.feature-card {
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+
+
+
+
+
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1rem;
+  justify-content: center; /* or left if you prefer */
+}
+
+.badge {
+  background: #f1f5f9;
+  color: #1f2937;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+}
+
+.badge:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
 }
