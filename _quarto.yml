@@ -15,7 +15,7 @@ website:
   navbar:
     right:
       - href: index.qmd
-        text: About Me
+        text: Home
         
       - href: projects.qmd
         text: Projects
