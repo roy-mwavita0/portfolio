@@ -10,7 +10,7 @@ page-layout: full
 
 ::: {.hero-content}
 
-# Roy Mwavita
+## Roy Mwavita
 
 ```{=html}
 
@@ -37,27 +37,23 @@ page-layout: full
 ```
 
 #### Research Data Analyst • Monitoring & Evaluation Specialist
-3+ experience in turning program data into actionable insights for public health and development programs.
+3+ experience in turning program data into actionable insights for public health, research and development programs.
 
-## 🛠️ What I work with
+### 🛠️ What I work with
 
 <div class="badges">
   <span class="badge">R</span>
   <span class="badge">Shiny</span>
   <span class="badge">Quarto</span>
   <span class="badge">KoboToolbox</span>
+  <span class="badge">ODK</span>
+  <span class="badge">RedCap</span>
   <span class="badge">Python</span>
   <span class="badge">Power BI</span>
   <span class="badge">Excel</span>
   <span class="badge">SQL (basic)</span>
   <span class="badge">Data Quality Systems</span>
   <span class="badge">M&E Frameworks</span>
-</div>
-
-<div class="hero-buttons">
-
-[Download CV](files/CV_Roy%20Mwavita.pdf){.btn .btn-secondary target="_blank"}
-
 </div>
 
 
@@ -107,3 +103,13 @@ Practical R programming tutorials focused on real-world MEAL and analytics workf
 :::
 
 :::
+
+
+---
+
+## CV
+<div class="hero-buttons">
+
+[Download CV](files/CV_Roy%20Mwavita.pdf){.btn .btn-secondary target="_blank"}
+
+</div>
