@@ -14,11 +14,11 @@
     "text": "3+ experience in turning program data into actionable insights for public health, research and development programs.\n\n\n\n\nR Shiny Quarto KoboToolbox ODK RedCap Python Power BI Excel SQL (basic) Data Quality Systems M&E Frameworks"
   },
   {
-    "objectID": "index.html#what-i-work-with",
-    "href": "index.html#what-i-work-with",
+    "objectID": "index.html#roy-mwavita",
+    "href": "index.html#roy-mwavita",
     "title": "Roy Mwavita",
     "section": "",
-    "text": "R Shiny Quarto KoboToolbox Python Power BI Excel SQL (basic) Data Quality Systems M&E Frameworks"
+    "text": "3+ experience in turning program data into actionable insights for public health, research and development programs.\n\n\n\n\nR Shiny Quarto KoboToolbox ODK RedCap Python Power BI Excel SQL (basic) Data Quality Systems M&E Frameworks"
   },
   {
     "objectID": "index.html#featured-areas",
@@ -26,6 +26,13 @@
     "title": "Roy Mwavita",
     "section": "Featured Areas",
     "text": "Featured Areas\n\n\n\n🧩 Projects\nData systems, automation tools, and analytics solutions developed for health and development programs.\nExplore →\n\n\n\n\n📊 Dashboards\nInteractive Shiny applications for program monitoring, data quality assessment, and performance tracking.\nExplore →\n\n\n\n\n📘 R Toolkit Digest\nPractical R programming tutorials focused on real-world MEAL and analytics workflows.\nExplore →"
+  },
+  {
+    "objectID": "index.html#cv",
+    "href": "index.html#cv",
+    "title": "Roy Mwavita",
+    "section": "CV",
+    "text": "CV\n\nDownload CV"
   },
   {
     "objectID": "dashboards.html",
@@ -74,7 +81,7 @@
     "href": "digest.html#issues",
     "title": "R Toolkit Digest",
     "section": "📚 Issues",
-    "text": "📚 Issues\n\n\n\n📊 Issue 1\n\nSmall ggplot2 Tricks That Make Better Charts\nTopics Covered:\n\nGrammar of Graphics\n\ngeom_col()\n\nFill aesthetics\n\nposition_dodge()\n\nA practical guide on improving the clarity and visual impact of bar charts in ggplot2.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n📊 Issue 2\n\nUnderstanding pivot_longer() and pivot_wider()\nTopics Covered:\n\nData reshaping in R\n\nWide vs long formats\n\ntidyverse workflows\n\n\nA practical guide on transforming datasets for analysis and visualization.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n\n📊 Issue 3\n\nFactors and Ordering Categories in ggplot2\nTopics Covered:\n\nUnderstanding factors in R\n\nSetting and reordering factor levels\n\nControlling category order in ggplot2\n\nCreating meaningful survey and Likert-scale visualizations\n\nA practical guide to using factors to control how categorical data is displayed in tables, analyses, and ggplot2 visualizations.\n\n\n\n  \n    📥 Download PDF"
+    "text": "📚 Issues\n\n\n\n📊 Issue 1\n\nSmall ggplot2 Tricks That Make Better Charts\nTopics Covered:\n\nGrammar of Graphics\n\ngeom_col()\n\nFill aesthetics\n\nposition_dodge()\n\nA practical guide on improving the clarity and visual impact of bar charts in ggplot2.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n📊 Issue 2\n\nUnderstanding pivot_longer() and pivot_wider()\nTopics Covered:\n\nData reshaping in R\n\nWide vs long formats\n\ntidyverse workflows\n\n\nA practical guide on transforming datasets for analysis and visualization.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n\n📊 Issue 3\n\nFactors and Ordering Categories in ggplot2\nTopics Covered:\n\nUnderstanding factors in R\n\nSetting and reordering factor levels\n\nControlling category order in ggplot2\n\nCreating meaningful survey and Likert-scale visualizations\n\nA practical guide to using factors to control how categorical data is displayed in tables, analyses, and ggplot2 visualizations.\n\n\n\n  \n    📥 Download PDF\n  \n\n\n\n\n\n\n\n📊 Issue 4\n\nDo More with Less Code in te Tidyverse\nTopics Covered:\n\nUsing across() to transform multiple columns at once\n\nUsing map() to automate repetitive data wrangling tasks\n\nUsing reduce() to combine multiple datasets efficiently\n\nWriting cleaner, more scalable tidyverse workflows\n\nA practical guide to reducing repetitive code in R by applying functions across columns, iterating over datasets, and combining multiple data sources using modern tidyverse tools.\n\n\n\n  \n    📥 Download PDF"
   },
   {
     "objectID": "newsletter.html",
@@ -82,19 +89,5 @@
     "title": "Newsletter",
     "section": "",
     "text": "Thoughts on:\n\nResearch\nData Analysis\nMonitoring & Evaluation\nData Visualization\n\n\n📰 Significant Figures\nA collection of insights on data, monitoring, and evaluation practice shared through my LinkedIn newsletter.\n\n  \n    View on LinkedIn\n  \n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html#cv",
-    "href": "index.html#cv",
-    "title": "Roy Mwavita",
-    "section": "CV",
-    "text": "CV\n\nDownload CV"
-  },
-  {
-    "objectID": "index.html#roy-mwavita",
-    "href": "index.html#roy-mwavita",
-    "title": "Roy Mwavita",
-    "section": "",
-    "text": "3+ experience in turning program data into actionable insights for public health, research and development programs.\n\n\n\n\nR Shiny Quarto KoboToolbox ODK RedCap Python Power BI Excel SQL (basic) Data Quality Systems M&E Frameworks"
   }
 ]

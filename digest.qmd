@@ -135,6 +135,42 @@ A practical guide to using factors to control how categorical data is displayed 
 :::
 
 :::
+::: {.g-col-12 .g-col-md-6}
+::: {.card}
+
+### 📊 Issue 4
+#### Do More with Less Code in te Tidyverse
+
+**Topics Covered:**
+
+- Using across() to transform multiple columns at once\
+- Using map() to automate repetitive data wrangling tasks\
+- Using reduce() to combine multiple datasets efficiently\
+- Writing cleaner, more scalable tidyverse workflows
+
+A practical guide to reducing repetitive code in R by applying functions across columns, iterating over datasets, and combining multiple data sources using modern tidyverse tools.
+
+```{=html}
+<iframe 
+  src="files/do_more_with_less.pdf"
+  width="100%" 
+  height="400px"
+  style="border:1px solid #ddd; border-radius:12px;">
+</iframe>
+```
+
+```{=html}
+<a href="files/do_more_with_less.pdf" target="_blank">
+  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
+    📥 Download PDF
+  </button>
+</a>
+
+```
+
+:::
+
+:::
 
 :::
 
