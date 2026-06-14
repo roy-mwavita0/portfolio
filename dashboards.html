@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Dashboards – Roy Mwavita</title>
+<title>dashboards – Roy Mwavita</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,37 +23,19 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-640605f58ae58ee79329c070719e555b.min.css" rel="stylesheet" append-hash="true" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b5cdc83d754cd650109f5c2e0467249f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNMP9FSHZH"></script>
 
 <script type="text/javascript">
@@ -63,171 +45,454 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)">
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Dashboards – Roy Mwavita">
-<meta property="og:description" content="Data analytics, dashboards, and monitoring &amp; evaluation portfolio">
-<meta property="og:image" content="https://roy-mwavita0.github.io/portfolio/images/cpara_assessment.png">
+<meta property="og:title" content="Roy Mwavita">
 <meta property="og:site_name" content="Roy Mwavita">
-<meta property="og:image:height" content="878">
-<meta property="og:image:width" content="1797">
-<meta name="twitter:title" content="Dashboards – Roy Mwavita">
-<meta name="twitter:description" content="Data analytics, dashboards, and monitoring &amp; evaluation portfolio">
-<meta name="twitter:image" content="https://roy-mwavita0.github.io/portfolio/images/cpara_assessment.png">
-<meta name="twitter:image-height" content="878">
-<meta name="twitter:image-width" content="1797">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roy Mwavita">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Roy Mwavita</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./dashboards.html" aria-current="page"> 
-<span class="menu-text">Dashboards</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./digest.html"> 
-<span class="menu-text">R Toolkit Digest</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./newsletter.html"> 
-<span class="menu-text">Newsletter</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#ovc-program-dashboard" id="toc-ovc-program-dashboard" class="nav-link active" data-scroll-target="#ovc-program-dashboard">📊 OVC Program Dashboard</a></li>
-  <li><a href="#job-tracker-dashboard" id="toc-job-tracker-dashboard" class="nav-link" data-scroll-target="#job-tracker-dashboard">💼 Job Tracker Dashboard</a></li>
-  <li><a href="#case-plan-readiness-achievement-tracker-dashboard" id="toc-case-plan-readiness-achievement-tracker-dashboard" class="nav-link" data-scroll-target="#case-plan-readiness-achievement-tracker-dashboard">💼 Case Plan Readiness Achievement Tracker Dashboard</a></li>
-  </ul>
-</nav>
+
+
+
+
+<style>
+  /* Root Theme Configuration matching the topmate aesthetic */
+  :root {
+    --brand-orange: #d94d43;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --bg-cream: #f6f4ee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background: var(--bg-cream);
+  }
+
+  /* Core Layout splits 1/4 and 3/4 */
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 992px) {
+    .portfolio-container {
+      grid-template-columns: 1.2fr 3.8fr;
+    }
+  }
+
+  /* Left Panel: Core Profile Branding Sidebar */
+  .profile-sidebar {
+    background-color: var(--brand-orange);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    line-height: 1.2;
+  }
+
+  .profile-sidebar h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .profile-sidebar p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  /* Social Links */
+  .sidebar-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-socials a {
+    color: var(--text-light);
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .sidebar-socials a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* Skill Badges */
+  .sidebar-skills-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .sidebar-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .sidebar-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Right Panel: Main Dashboard Content Area */
+  .content-showcase {
+    background-color: var(--bg-cream);
+    padding: 4rem 3rem;
+    color: var(--text-dark);
+  }
+
+  @media (max-width: 768px) {
+    .content-showcase {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  /* Horizontal Content-Top Navigation Menu */
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-nav a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sidebar-nav a:hover {
+    color: var(--brand-orange);
+    background: #ffffff;
+    border-color: var(--brand-orange);
+    transform: translateY(-1px);
+  }
+
+  .sidebar-nav a.active {
+    color: #ffffff;
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(217, 77, 67, 0.25);
+  }
+
+  .showcase-section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+  }
+
+  .showcase-subtitle {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .showcase-list {
+    margin-bottom: 2.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .showcase-list li {
+    font-size: 14px;
+    color: #444444;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  /* Enhanced Content Cards styling for Dashboards section */
+  .dashboard-container-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.02);
+    margin-bottom: 3rem;
+  }
+
+  .dashboard-container-card h2 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dashboard-meta-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    color: var(--brand-orange);
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .dashboard-container-card p {
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .metrics-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .metrics-list li {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222222;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .img-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .img-gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+
+  hr {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+</style>
+
+<div class="portfolio-container">
+  <!-- Left Panel Sidebar -->
+  <div class="profile-sidebar">
+    <div class="avatar-frame">
+      <img src="images/roy.jpg" alt="Roy Mwavita">
     </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Dashboards</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
     
-  
+    <h1>Roy Mwavita</h1>
+    <h4 class="anchored">Research Data Analyst • Monitoring &amp; Evaluation Specialist</h4>
+    <p>2+ years of experience turning program data into actionable insights for public health, research and development programs.</p>
     
+    <div class="sidebar-socials">
+      <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <div class="sidebar-skills-title">🛠️ What I work with</div>
+    <div class="sidebar-badges">
+      <span class="sidebar-badge">R</span>
+      <span class="sidebar-badge">Shiny</span>
+      <span class="sidebar-badge">Quarto</span>
+      <span class="sidebar-badge">KoboToolbox</span>
+      <span class="sidebar-badge">ODK</span>
+      <span class="sidebar-badge">RedCap</span>
+      <span class="sidebar-badge">Python</span>
+      <span class="sidebar-badge">Power BI</span>
+      <span class="sidebar-badge">Excel</span>
+      <span class="sidebar-badge">SQL (basic)</span>
+      <span class="sidebar-badge">Data Quality Systems</span>
+      <span class="sidebar-badge">M&amp;E Frameworks</span>
+    </div>
+  </div>
+
+  <!-- Right Panel Content Showcase -->
+  <div class="content-showcase">
+    <!-- Navigation Menu Block -->
+    <nav class="sidebar-nav">
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="./dashboards.html" class="active"><i class="fas fa-chart-pie"></i> Dashboards</a>
+      <a href="./digest.html"><i class="fas fa-book-open"></i> R Toolkit Digest</a>
+      <a href="./newsletter.html"><i class="fas fa-paper-plane"></i> Newsletter</a>
+    </nav>
+
+    <div class="showcase-section-title">Interactive Dashboards</div>
+    <p class="showcase-subtitle">
+      Over time, I have developed several interactive dashboards using <strong>R (Shiny, bslib, tidyverse, ggplot2, and highcharter)</strong> to support Monitoring, Evaluation, Accountability, and Learning (MEAL) functions.
+    </p>
+    <p class="showcase-subtitle">
+      These dashboards transform raw program data into interactive insights that support:
+    </p>
+    <ul class="showcase-list">
+      <li>Real-time decision-making</li>
+      <li>Case management tracking</li>
+      <li>Data quality and performance monitoring</li>
+      <li>Operational reporting and learning</li>
+    </ul>
+
+    <hr>
+
+    <!-- Dashboard Section 1: OVC -->
+    <div class="dashboard-container-card">
+      <h2 class="anchored">📊 OVC Program Dashboard</h2>
+    
+      <p style="font-weight: 600; color: #cc0000; margin-bottom: 0.75rem;"><i class="fas fa-circle" style="font-size: 10px; vertical-align: middle;"></i> Live Dashboard Preview</p>
+      <iframe src="https://sufuri.shinyapps.io/ovc_gaps/" width="100%" height="520px" style="border:1px solid #e0e0e0; border-radius:14px; margin-bottom: 1.5rem;" loading="lazy" allow="fullscreen">
+      </iframe>
+      <p style="font-size: 13px; color: #888;"><i class="fas fa-info-circle"></i> If the dashboard doesn't load, <a href="https://sufuri.shinyapps.io/ovc_gaps/" target="_blank">click here to open in a new tab</a>.</p>
+
+      <div class="dashboard-meta-title">Problem Addressed</div>
+      <p>Data was fragmented across multiple Excel files, making it difficult to track beneficiaries, monitor case management progress, and identify service gaps in real time.</p>
+
+      <div class="dashboard-meta-title">Outcome Achieved</div>
+      <ul class="metrics-list">
+        <li>🟢 <strong>⬆️ 65% improvement</strong> in real-time visibility of OVC caseload</li>
+        <li>🟢 <strong>⬆️ 50% faster</strong> identification of vulnerable households requiring follow-up</li>
+        <li>🟢 <strong>⬆️ Improved</strong> data-driven decision-making during monthly review meetings</li>
+      </ul>
+    </div>
+
+    <!-- Dashboard Section 2: Job Tracker -->
+    <div class="dashboard-container-card">
+      <h2 class="anchored">💼 Job Tracker Dashboard</h2>
+
+      <p style="font-weight: 600; color: #cc0000; margin-bottom: 0.75rem;"><i class="fas fa-circle" style="font-size: 10px; vertical-align: middle;"></i> Live Dashboard Preview</p>
+      <iframe src="https://sufuri.shinyapps.io/job_tracker/" width="100%" height="600px" style="border:1px solid #e0e0e0; border-radius:14px; margin-bottom: 1.5rem;" loading="lazy" allow="fullscreen">
+      </iframe>
+      <p style="font-size: 13px; color: #888;"><i class="fas fa-info-circle"></i> If the dashboard doesn't load, <a href="https://sufuri.shinyapps.io/job_tracker/" target="_blank">click here to open in a new tab</a>.</p>
+
+      <div class="dashboard-meta-title">Problem Addressed</div>
+      <p>I was not tracking my job applications at all. After applying for multiple roles, I had no structured way of knowing the status of each application or understanding how my applications were performing, especially since I rarely received feedback from employers.</p>
+
+      <div class="dashboard-meta-title">Outcome Achieved</div>
+      <ul class="metrics-list">
+        <li>🟢 <strong>⬆️ 70% improvement</strong> in application tracking efficiency</li>
+        <li>🟢 <strong>⬆️ 60% reduction</strong> in missed follow-ups</li>
+        <li>🟢 <strong>⬆️ Clear visibility</strong> of my application pipeline from submission to outcome</li>
+      </ul>
+    </div>
+
+    <!-- Dashboard Section 3: CPARA Tracker -->
+    <div class="dashboard-container-card">
+      <h2 class="anchored">📋 Case Plan Readiness Achievement Tracker Dashboard</h2>
+      
+      <div class="dashboard-meta-title">Dashboard Interface Preview</div>
+      
+      <div class="img-gallery-grid">
+        <img src="images/cpara_assessment.png" alt="CPARA Assessment Interface View 1">
+        <img src="images/cpara_assessment_2.png" alt="CPARA Assessment Interface View 2">
+      </div>
+
+      <div class="dashboard-meta-title">Problem Addressed</div>
+      <p>The CPARA assessment data for OVC households was previously difficult to track and interpret in real time, making it challenging for teams to monitor progress, identify gaps, and follow up on case plan achievements effectively.</p>
+
+      <div class="dashboard-meta-title">Outcome Achieved</div>
+      <ul class="metrics-list">
+        <li>🟢 <strong>⬆️ Improved</strong> real-time visibility of household assessment progress</li>
+        <li>🟢 <strong>⬆️ Faster</strong> identification of gaps and protection risks</li>
+        <li>🟢 <strong>⬆️ Enhanced</strong> data-driven decision-making for CPARA monitoring</li>
+      </ul>
+    </div>
+
   </div>
   
-
-
-</header>
-
-
-<p>Over time, I have developed several interactive dashboards using <strong>R (Shiny, bslib, tidyverse, ggplot2, and highcharter)</strong> to support Monitoring, Evaluation, Accountability, and Learning (MEAL) functions.</p>
-<p>These dashboards transform raw program data into interactive insights that support:<br>
-- Real-time decision-making<br>
-- Case management tracking<br>
-- Data quality and performance monitoring<br>
-- Operational reporting and learning</p>
-<p><strong>The sections below highlight selected dashboards, their purpose, the problem they solved, outcomes, and the tools used.</strong></p>
-<hr>
-<section id="ovc-program-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="ovc-program-dashboard">📊 OVC Program Dashboard</h2>
-<div class="card">
-<p><strong>🔴 Live Dashboard</strong></p>
-<iframe src="https://sufuri.shinyapps.io/ovc_gaps/" width="100%" height="520px" style="border:1px solid #ddd; border-radius:14px;">
-</iframe>
-
-<p><strong>Problem Addressed</strong><br>
-Data was fragmented across multiple Excel files, making it difficult to track beneficiaries, monitor case management progress, and identify service gaps in real time.</p>
-<p><strong>Outcome Achieved</strong></p>
-<p>⬆️ 65% improvement in real-time visibility of OVC caseload<br>
-⬆️ 50% faster identification of vulnerable households requiring follow-up<br>
-⬆️ Improved data-driven decision-making during monthly review meetings</p>
-</div>
-<hr>
-</section>
-<section id="job-tracker-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="job-tracker-dashboard">💼 Job Tracker Dashboard</h2>
-<div class="card">
-<p><strong>🔴 Live Dashboard</strong></p>
-<iframe src="https://sufuri.shinyapps.io/job_tracker/" width="100%" height="600px" style="border:1px solid #ddd; border-radius:14px;">
-</iframe>
-<p><strong>Problem Addressed</strong><br>
-I was not tracking my job applications at all. After applying for multiple roles, I had no structured way of knowing the status of each application or understanding how my applications were performing, especially since I rarely received feedback from employers.</p>
-<p><strong>Outcome Achieved</strong></p>
-<p>⬆️ 70% improvement in application tracking efficiency<br>
-⬆️ 60% reduction in missed follow-ups<br>
-⬆️ Clear visibility of my application pipeline from submission to outcome</p>
-</div>
-<hr>
-</section>
-<section id="case-plan-readiness-achievement-tracker-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="case-plan-readiness-achievement-tracker-dashboard">💼 Case Plan Readiness Achievement Tracker Dashboard</h2>
-<div class="card">
-<p><strong>📊 Dashboard Preview</strong></p>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<p><img src="images/cpara_assessment.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-<div class="g-col-12 g-col-md-6">
-<p><img src="images/cpara_assessment_2.png" class="img-fluid" style="width:100.0%"></p>
+  
+  <hr>
+<div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
+  <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
 </div>
-<hr>
-<p><strong>Problem Addressed</strong><br>
-The CPARA assessment data for OVC households was previously difficult to track and interpret in real time, making it challenging for teams to monitor progress, identify gaps, and follow up on case plan achievements effectively.</p>
-<hr>
-<p><strong>Outcome Achieved</strong></p>
-<p>⬆️ Improved real-time visibility of household assessment progress<br>
-⬆️ Faster identification of gaps and protection risks<br>
-⬆️ Enhanced data-driven decision-making for CPARA monitoring</p>
-</div>
 
 
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -326,7 +591,7 @@ The CPARA assessment data for OVC households was previously difficult to track a
         },
         interactive: true,
         interactiveBorder: 10,
-        theme: 'quarto',
+        theme: 'light-border',
         placement: 'bottom-start',
       };
       if (contentFn) {
@@ -626,20 +891,6 @@ The CPARA assessment data for OVC households was previously difficult to track a
     }
   });
   </script>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>Copyright 2026, Roy Mwavita. Built with Quarto.</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 
