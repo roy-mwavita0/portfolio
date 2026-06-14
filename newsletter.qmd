@@ -83,14 +83,6 @@ page-layout: full
     width: 100%;
   }
 
-  .profile-sidebar p {
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
   /* Social Links */
   .sidebar-socials {
     display: flex;
@@ -108,37 +100,6 @@ page-layout: full
   .sidebar-socials a:hover {
     opacity: 1;
     transform: scale(1.1);
-  }
-
-  /* Skill Badges */
-  .sidebar-skills-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-    width: 100%;
-    text-align: left;
-    font-weight: 600;
-  }
-
-  .sidebar-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .sidebar-badge {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--text-light);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* Right Panel: Main Dashboard Content Area */
@@ -294,7 +255,6 @@ page-layout: full
     border-top: 1px solid rgba(0,0,0,0.1);
   }
 </style>
-
 ```
 
 
@@ -308,28 +268,11 @@ page-layout: full
     
     <h1>Roy Mwavita</h1>
     <h4>Research Data Analyst • Monitoring & Evaluation Specialist</h4>
-    <p>2+ years of experience turning program data into actionable insights for public health, research and development programs.</p>
     
     <div class="sidebar-socials">
-      <a href="[https://github.com/roy-mwavita0](https://github.com/roy-mwavita0)" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="[https://www.linkedin.com/in/roy-mwavita-495b50220/](https://www.linkedin.com/in/roy-mwavita-495b50220/)" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-    
-    <div class="sidebar-skills-title">🛠️ What I work with</div>
-    <div class="sidebar-badges">
-      <span class="sidebar-badge">R</span>
-      <span class="sidebar-badge">Shiny</span>
-      <span class="sidebar-badge">Quarto</span>
-      <span class="sidebar-badge">KoboToolbox</span>
-      <span class="sidebar-badge">ODK</span>
-      <span class="sidebar-badge">RedCap</span>
-      <span class="sidebar-badge">Python</span>
-      <span class="sidebar-badge">Power BI</span>
-      <span class="sidebar-badge">Excel</span>
-      <span class="sidebar-badge">SQL (basic)</span>
-      <span class="sidebar-badge">Data Quality Systems</span>
-      <span class="sidebar-badge">M&E Frameworks</span>
     </div>
   </div>
 
@@ -366,7 +309,7 @@ page-layout: full
         A professional space where I dissect tactical lessons regarding data architecture, indicators, framework modeling, and monitoring and evaluation systems. New editions are shared publicly directly through my LinkedIn newsletter network.
       </p>
       
-      <a href="[https://www.linkedin.com/newsletters/significant-figures-7411408742019366913/](https://www.linkedin.com/newsletters/significant-figures-7411408742019366913/)" target="_blank" class="linkedin-btn">
+      <a href="https://www.linkedin.com/newsletters/significant-figures-7411408742019366913/" target="_blank" class="linkedin-btn">
         <i class="fab fa-linkedin"></i> View on LinkedIn
       </a>
     </div>
@@ -379,4 +322,5 @@ page-layout: full
   <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
 </div>
+
 ```
