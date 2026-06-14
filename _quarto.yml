@@ -10,33 +10,19 @@ website:
   twitter-card: true
   page-navigation: true
   back-to-top-navigation: true
-  page-footer: "Copyright 2026, Roy Mwavita. Built with Quarto." 
-
-  navbar:
-    right:
-      - href: index.qmd
-        text: Home
-        
-      - href: projects.qmd
-        text: Projects
-
-      - href: dashboards.qmd
-        text: Dashboards
-
-      - href: digest.qmd
-        text: R Toolkit Digest
-        
-      - href: newsletter.qmd
-        text: Newsletter
-
-        
+  page-footer:
+    left: "Copyright © 2026 Roy Mwavita"
+    right: "Built with <a href='https://quarto.org' target='_blank'>Quarto</a>"
+    center: "All rights reserved"
+    border: true
+    background: "#f6f4ee"
 
 format:
   html:
-    theme: yeti
+    theme: none
     css: styles.css
-    toc: true
+    toc: false
+    page-layout: full
     include-in-header:
       text: |
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)">

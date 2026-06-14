@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R Toolkit Digest – Roy Mwavita</title>
+<title>digest – Roy Mwavita</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -23,37 +23,19 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html-640605f58ae58ee79329c070719e555b.min.css" rel="stylesheet" append-hash="true" data-mode="light">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b5cdc83d754cd650109f5c2e0467249f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
-  "language": {
-    "search-no-results-text": "No results",
-    "search-matching-documents-text": "matching documents",
-    "search-copy-link-title": "Copy link to search",
-    "search-hide-matches-text": "Hide additional matches",
-    "search-more-match-text": "more match in this document",
-    "search-more-matches-text": "more matches in this document",
-    "search-clear-button-title": "Clear",
-    "search-text-placeholder": "",
-    "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit",
-    "search-label": "Search"
-  }
-}</script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XNMP9FSHZH"></script>
 
 <script type="text/javascript">
@@ -63,223 +45,553 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 </script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css)">
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="R Toolkit Digest – Roy Mwavita">
-<meta property="og:image" content="images/R_Toolkit_digest_logo.png">
+<meta property="og:title" content="Roy Mwavita">
 <meta property="og:site_name" content="Roy Mwavita">
-<meta name="twitter:title" content="R Toolkit Digest – Roy Mwavita">
-<meta name="twitter:image" content="images/R_Toolkit_digest_logo.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Roy Mwavita">
+<meta name="twitter:card" content="summary">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body>
 
-<div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Roy Mwavita</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
-<span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./dashboards.html"> 
-<span class="menu-text">Dashboards</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./digest.html" aria-current="page"> 
-<span class="menu-text">R Toolkit Digest</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./newsletter.html"> 
-<span class="menu-text">Newsletter</span></a>
-  </li>  
-</ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
-</div>
-      </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#issues" id="toc-issues" class="nav-link active" data-scroll-target="#issues">📚 Issues</a></li>
-  </ul>
-</nav>
+
+
+
+
+<style>
+  /* Root Theme Configuration matching the topmate aesthetic */
+  :root {
+    --brand-orange: #d94d43;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --bg-cream: #f6f4ee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background: var(--bg-cream);
+  }
+
+  /* Core Layout splits 1/4 and 3/4 */
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
+
+  @media (min-width: 992px) {
+    .portfolio-container {
+      grid-template-columns: 1.2fr 3.8fr;
+    }
+  }
+
+  /* Left Panel: Core Profile Branding Sidebar */
+  .profile-sidebar {
+    background-color: var(--brand-orange);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .avatar-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    line-height: 1.2;
+  }
+
+  .profile-sidebar h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .profile-sidebar p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  /* Social Links */
+  .sidebar-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-socials a {
+    color: var(--text-light);
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .sidebar-socials a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* Skill Badges */
+  .sidebar-skills-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .sidebar-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .sidebar-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Right Panel: Main Dashboard Content Area */
+  .content-showcase {
+    background-color: var(--bg-cream);
+    padding: 4rem 3rem;
+    color: var(--text-dark);
+  }
+
+  @media (max-width: 768px) {
+    .content-showcase {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  /* Horizontal Content-Top Navigation Menu */
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-nav a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sidebar-nav a:hover {
+    color: var(--brand-orange);
+    background: #ffffff;
+    border-color: var(--brand-orange);
+    transform: translateY(-1px);
+  }
+
+  .sidebar-nav a.active {
+    color: #ffffff;
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(217, 77, 67, 0.25);
+  }
+
+  /* Header Branding Row Layout */
+  .digest-header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .digest-header-grid {
+      grid-template-columns: 1.5fr 3.5fr;
+    }
+  }
+
+  .digest-logo-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .digest-intro-text h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+
+  .digest-intro-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444444;
+    margin-bottom: 1rem;
+  }
+
+  .showcase-section-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+  }
+
+  /* Grid Layout for Issues Content Blocks */
+  .digest-issues-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    .digest-issues-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .issue-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .issue-card-content h3 {
+    font-size: 1.3rem;
+    color: var(--brand-orange);
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  .issue-card-content h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .issue-card-content p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+
+  .topics-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #666666;
+    margin-bottom: 0.5rem;
+  }
+
+  .topics-list {
+    margin-bottom: 1.5rem;
+    padding-left: 1.25rem;
+  }
+
+  .topics-list li {
+    font-size: 13px;
+    color: #444444;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Embedded Document Frame Containers */
+  .pdf-frame-wrapper {
+    margin-bottom: 1.25rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    background: #ffffff;
+  }
+
+  .download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 12px;
+    background: var(--brand-orange);
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    text-align: center;
+  }
+
+  .download-btn:hover {
+    background: #bf3f36;
+    transform: translateY(-1px);
+  }
+
+  hr {
+    margin: 2.5rem 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+</style>
+
+<div class="portfolio-container">
+  <!-- Left Panel Sidebar Dynamic Fragment -->
+  <div class="profile-sidebar">
+    <div class="avatar-frame">
+      <img src="images/roy.jpg" alt="Roy Mwavita">
     </div>
-<!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R Toolkit Digest</h1>
-</div>
-
-
-
-<div class="quarto-title-meta">
-
     
-  
+    <h1>Roy Mwavita</h1>
+    <h4 class="anchored">Research Data Analyst • Monitoring &amp; Evaluation Specialist</h4>
+    <p>2+ years of experience turning program data into actionable insights for public health, research and development programs.</p>
     
+    <div class="sidebar-socials">
+      <a href="[https://github.com/roy-mwavita0](https://github.com/roy-mwavita0)" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="[https://www.linkedin.com/in/roy-mwavita-495b50220/](https://www.linkedin.com/in/roy-mwavita-495b50220/)" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <div class="sidebar-skills-title">🛠️ What I work with</div>
+    <div class="sidebar-badges">
+      <span class="sidebar-badge">R</span>
+      <span class="sidebar-badge">Shiny</span>
+      <span class="sidebar-badge">Quarto</span>
+      <span class="sidebar-badge">KoboToolbox</span>
+      <span class="sidebar-badge">ODK</span>
+      <span class="sidebar-badge">RedCap</span>
+      <span class="sidebar-badge">Python</span>
+      <span class="sidebar-badge">Power BI</span>
+      <span class="sidebar-badge">Excel</span>
+      <span class="sidebar-badge">SQL (basic)</span>
+      <span class="sidebar-badge">Data Quality Systems</span>
+      <span class="sidebar-badge">M&amp;E Frameworks</span>
+    </div>
+  </div>
+
+  <!-- Right Panel Content Showcase Area -->
+  <div class="content-showcase">
+    <!-- Horizontal Top Menu Navigation Bar -->
+    <nav class="sidebar-nav">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
+      <a href="digest.html" class="active"><i class="fas fa-book-open"></i> R Toolkit Digest</a>
+      <a href="newsletter.html"><i class="fas fa-paper-plane"></i> Newsletter</a>
+    </nav>
+
+    <!-- Header Branding Module -->
+    <div class="digest-header-grid">
+      <div class="digest-logo-wrapper">
+        <img src="images/R_Toolkit_digest_logo.png" alt="R Toolkit Digest Logo">
+      </div>
+      <div class="digest-intro-text">
+        <h2 class="anchored">R Toolkit Digest</h2>
+        <p>A collection of practical lessons learned while working with R for data analysis, data visualization, and Monitoring, Evaluation, Accountability, and Learning (MEAL) systems.</p>
+        <p>Each issue breaks down real-world techniques used in operational reporting dashboards, custom data transformation pipelines, and dynamic programmatic workflows.</p>
+      </div>
+    </div>
+
+    <div class="showcase-section-title">📚 Published Issues</div>
+    
+    <!-- Issues Grid Matrix Framework Layout -->
+    <div class="digest-issues-grid">
+
+      <!-- Issue Card Component: Issue 1 -->
+      <div class="issue-card">
+        <div class="issue-card-content">
+          <h3 class="anchored">📊 Issue 1</h3>
+          <h4 class="anchored">Small ggplot2 Tricks That Make Better Charts</h4>
+          
+          <div class="topics-title">Topics Covered:</div>
+          <ul class="topics-list">
+            <li>Grammar of Graphics rules</li>
+            <li>Optimizing <code>geom_col()</code> bars</li>
+            <li>Custom fill palettes &amp; aesthetics</li>
+            <li>Polishing alignments via <code>position_dodge()</code></li>
+          </ul>
+          
+          <p>A practical engineering guide on improving the structural clarity, contrast mapping, and overall visual communication impact of bar charts in ggplot2.</p>
+        </div>
+        
+        <div>
+          <div class="pdf-frame-wrapper">
+            <iframe src="files/improving_group_charts.pdf" width="100%" height="400px" style="border:none; display:block;" loading="lazy"></iframe>
+          </div>
+          <a href="files/improving_group_charts.pdf" target="_blank" class="download-btn">
+            <i class="fas fa-download"></i> Download PDF Document
+          </a>
+        </div>
+      </div>
+
+      <!-- Issue Card Component: Issue 2 -->
+      <div class="issue-card">
+        <div class="issue-card-content">
+          <h3 class="anchored">📊 Issue 2</h3>
+          <h4 class="anchored">Understanding pivot_longer() and pivot_wider()</h4>
+          
+          <div class="topics-title">Topics Covered:</div>
+          <ul class="topics-list">
+            <li>Structural data reshaping concepts in R</li>
+            <li>Converting wide profiles to relational long formats</li>
+            <li>Advanced tidyverse engineering pipelines</li>
+          </ul>
+          
+          <p>A comprehensive functional guide demonstrating how to dynamically transform messy, non-relational survey datasets for fast downstream modeling and visualization.</p>
+        </div>
+        
+        <div>
+          <div class="pdf-frame-wrapper">
+            <iframe src="files/reshaping_survey_data.pdf" width="100%" height="400px" style="border:none; display:block;" loading="lazy"></iframe>
+          </div>
+          <a href="files/reshaping_survey_data.pdf" target="_blank" class="download-btn">
+            <i class="fas fa-download"></i> Download PDF Document
+          </a>
+        </div>
+      </div>
+
+      <!-- Issue Card Component: Issue 3 -->
+      <div class="issue-card">
+        <div class="issue-card-content">
+          <h3 class="anchored">📊 Issue 3</h3>
+          <h4 class="anchored">Factors and Ordering Categories in ggplot2</h4>
+          
+          <div class="topics-title">Topics Covered:</div>
+          <ul class="topics-list">
+            <li>Deep dive into vector factors in R</li>
+            <li>Explicitly setting and sorting structural factor levels</li>
+            <li>Controlling explicit category mapping scales in ggplot2</li>
+            <li>Creating clear, ordered Likert-scale visualization distributions</li>
+          </ul>
+          
+          <p>A structural analytics guide to managing vector factors to systematically control how categorical groups organize themselves in tables and visualization grids.</p>
+        </div>
+        
+        <div>
+          <div class="pdf-frame-wrapper">
+            <iframe src="files/factors_and_ordering_categories.pdf" width="100%" height="400px" style="border:none; display:block;" loading="lazy"></iframe>
+          </div>
+          <a href="files/factors_and_ordering_categories.pdf" target="_blank" class="download-btn">
+            <i class="fas fa-download"></i> Download PDF Document
+          </a>
+        </div>
+      </div>
+
+      <!-- Issue Card Component: Issue 4 -->
+      <div class="issue-card">
+        <div class="issue-card-content">
+          <h3 class="anchored">📊 Issue 4</h3>
+          <h4 class="anchored">Do More with Less Code in the Tidyverse</h4>
+          
+          <div class="topics-title">Topics Covered:</div>
+          <ul class="topics-list">
+            <li>Applying <code>across()</code> to mutate multiple metrics simultaneously</li>
+            <li>Using functional loops via <code>map()</code> to eliminate manual code loops</li>
+            <li>Deploying <code>reduce()</code> to join collection lists efficiently</li>
+            <li>Writing clean, performant, and maintainable tidyverse scripts</li>
+          </ul>
+          
+          <p>An efficiency manual breaking down methods for reducing code replication by programmatically looping transformations across data frame shapes and complex arrays.</p>
+        </div>
+        
+        <div>
+          <div class="pdf-frame-wrapper">
+            <iframe src="files/do_more_with_less.pdf" width="100%" height="400px" style="border:none; display:block;" loading="lazy"></iframe>
+          </div>
+          <a href="files/do_more_with_less.pdf" target="_blank" class="download-btn">
+            <i class="fas fa-download"></i> Download PDF Document
+          </a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
   
-
-
-</header>
-
-
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<p><img src="images/R_Toolkit_digest_logo.png" class="img-fluid" style="width:100.0%"></p>
-</div>
-<div class="g-col-12 g-col-md-6">
-<p>A collection of practical lessons learned while working with R for data analysis, visualization, and MEAL systems.</p>
-<p>Each issue breaks down real-world techniques used in reporting, dashboards, and data transformation workflows.</p>
-</div>
-</div>
-<hr>
-<section id="issues" class="level2">
-<h2 class="anchored" data-anchor-id="issues">📚 Issues</h2>
-<div class="grid">
-<div class="g-col-12 g-col-md-6">
-<section id="issue-1" class="level3 card">
-<h3 class="anchored" data-anchor-id="issue-1">📊 Issue 1</h3>
-<section id="small-ggplot2-tricks-that-make-better-charts" class="level4">
-<h4 class="anchored" data-anchor-id="small-ggplot2-tricks-that-make-better-charts">Small ggplot2 Tricks That Make Better Charts</h4>
-<p><strong>Topics Covered:</strong></p>
-<ul>
-<li>Grammar of Graphics<br>
-</li>
-<li>geom_col()<br>
-</li>
-<li>Fill aesthetics<br>
-</li>
-<li>position_dodge()</li>
-</ul>
-<p>A practical guide on improving the clarity and visual impact of bar charts in ggplot2.</p>
-<iframe src="files/improving_group_charts.pdf" width="100%" height="400px" style="border:1px solid #ddd; border-radius:12px;">
-</iframe>
-<a href="files/improving_group_charts.pdf" target="_blank">
-  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
-    📥 Download PDF
-  </button>
-</a>
-</section>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="issue-2" class="level3 card">
-<h3 class="anchored" data-anchor-id="issue-2">📊 Issue 2</h3>
-<section id="understanding-pivot_longer-and-pivot_wider" class="level4">
-<h4 class="anchored" data-anchor-id="understanding-pivot_longer-and-pivot_wider">Understanding pivot_longer() and pivot_wider()</h4>
-<p><strong>Topics Covered:</strong></p>
-<ul>
-<li>Data reshaping in R<br>
-</li>
-<li>Wide vs long formats<br>
-</li>
-<li>tidyverse workflows<br>
-</li>
-</ul>
-<p>A practical guide on transforming datasets for analysis and visualization.</p>
-<iframe src="files/reshaping_survey_data.pdf" width="100%" height="400px" style="border:1px solid #ddd; border-radius:12px;">
-</iframe>
-<a href="files/reshaping_survey_data.pdf" target="_blank">
-  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
-    📥 Download PDF
-  </button>
-</a>
-
-</section>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="issue-3" class="level3 card">
-<h3 class="anchored" data-anchor-id="issue-3">📊 Issue 3</h3>
-<section id="factors-and-ordering-categories-in-ggplot2" class="level4">
-<h4 class="anchored" data-anchor-id="factors-and-ordering-categories-in-ggplot2">Factors and Ordering Categories in ggplot2</h4>
-<p><strong>Topics Covered:</strong></p>
-<ul>
-<li>Understanding factors in R<br>
-</li>
-<li>Setting and reordering factor levels<br>
-</li>
-<li>Controlling category order in ggplot2<br>
-</li>
-<li>Creating meaningful survey and Likert-scale visualizations</li>
-</ul>
-<p>A practical guide to using factors to control how categorical data is displayed in tables, analyses, and ggplot2 visualizations.</p>
-<iframe src="files/factors_and_ordering_categories.pdf" width="100%" height="400px" style="border:1px solid #ddd; border-radius:12px;">
-</iframe>
-<a href="files/factors_and_ordering_categories.pdf" target="_blank">
-  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
-    📥 Download PDF
-  </button>
-</a>
-
-</section>
-</section>
-</div>
-<div class="g-col-12 g-col-md-6">
-<section id="issue-4" class="level3 card">
-<h3 class="anchored" data-anchor-id="issue-4">📊 Issue 4</h3>
-<section id="do-more-with-less-code-in-te-tidyverse" class="level4">
-<h4 class="anchored" data-anchor-id="do-more-with-less-code-in-te-tidyverse">Do More with Less Code in te Tidyverse</h4>
-<p><strong>Topics Covered:</strong></p>
-<ul>
-<li>Using across() to transform multiple columns at once<br>
-</li>
-<li>Using map() to automate repetitive data wrangling tasks<br>
-</li>
-<li>Using reduce() to combine multiple datasets efficiently<br>
-</li>
-<li>Writing cleaner, more scalable tidyverse workflows</li>
-</ul>
-<p>A practical guide to reducing repetitive code in R by applying functions across columns, iterating over datasets, and combining multiple data sources using modern tidyverse tools.</p>
-<iframe src="files/do_more_with_less.pdf" width="100%" height="400px" style="border:1px solid #ddd; border-radius:12px;">
-</iframe>
-<a href="files/do_more_with_less.pdf" target="_blank">
-  <button style="padding:8px 14px; border:none; border-radius:8px; background:#2c3e50; color:white; cursor:pointer;">
-    📥 Download PDF
-  </button>
-</a>
-
-</section>
-</section>
+  <hr>
+<div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
+  <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
 </div>
 
 
-</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+    tabsets.forEach(function(tabset) {
+      const tabby = new Tabby('#' + tabset.id);
+    });
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -378,7 +690,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         },
         interactive: true,
         interactiveBorder: 10,
-        theme: 'quarto',
+        theme: 'light-border',
         placement: 'bottom-start',
       };
       if (contentFn) {
@@ -678,20 +990,6 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     }
   });
   </script>
-</div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>Copyright 2026, Roy Mwavita. Built with Quarto.</p>
-</div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
 

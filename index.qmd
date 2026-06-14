@@ -2,114 +2,415 @@
 page-layout: full
 ---
 
-::: {.hero-container}
-
-::: {.hero-image}
-![](images/roy.jpg){.profile-img}
-:::
-
-::: {.hero-content}
-
-## Roy Mwavita
-
 ```{=html}
+<style>
+  /* Root Theme Configuration matching the topmate aesthetic */
+  :root {
+    --brand-orange: #d94d43;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --bg-cream: #f6f4ee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
 
-<div class="social-links">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-<a href="https://github.com/roy-mwavita0"
-   target="_blank"
-   rel="noopener noreferrer">
-   <i class="fab fa-github"></i>
-</a>
+  body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+    background: var(--bg-cream);
+  }
 
-<a href="https://www.linkedin.com/in/roy-mwavita-495b50220/"
-   target="_blank"
-   rel="noopener noreferrer">
-   <i class="fab fa-linkedin"></i>
-</a>
+  /* Core Layout splits 1/4 and 3/4 */
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+  }
 
-<a href="mailto:lennicroy@gmail.com">
-   <i class="fas fa-envelope"></i>
-</a>
+  @media (min-width: 992px) {
+    .portfolio-container {
+      grid-template-columns: 1.2fr 3.8fr;
+    }
+  }
 
-</div>
+  /* 1/4 Left Panel: Core Profile Branding Sidebar */
+  .profile-sidebar {
+    background-color: var(--brand-orange);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
+  .avatar-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .profile-sidebar h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+    line-height: 1.2;
+  }
+
+  .profile-sidebar h4 {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .profile-sidebar p {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.85;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+
+  /* Vertical Sidebar Social Links Block */
+  .sidebar-socials {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-socials a {
+    color: var(--text-light);
+    opacity: 0.85;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+
+  .sidebar-socials a:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* Sidebar Skill Badges Content Block */
+  .sidebar-skills-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+    width: 100%;
+    text-align: left;
+    font-weight: 600;
+  }
+
+  .sidebar-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .sidebar-badge {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--text-light);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* 3/4 Right Panel: Main Dashboard Content Area */
+  .content-showcase {
+    background-color: var(--bg-cream);
+    padding: 4rem 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .content-showcase {
+      padding: 2rem 1.5rem;
+    }
+  }
+
+  /* Horizontal Content-Top Navigation Menu */
+  .sidebar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .sidebar-nav a {
+    color: #555555;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .sidebar-nav a:hover {
+    color: var(--brand-orange);
+    background: #ffffff;
+    border-color: var(--brand-orange);
+    transform: translateY(-1px);
+  }
+
+  .sidebar-nav a.active {
+    color: #ffffff;
+    background: var(--brand-orange);
+    border-color: var(--brand-orange);
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(217, 77, 67, 0.25);
+  }
+
+  .showcase-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  /* FIXED: Content Cards - 3 columns in one row */
+  .showcase-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  /* On tablets, show 2 columns */
+  @media (max-width: 992px) {
+    .showcase-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* On mobile, show 1 column */
+  @media (max-width: 768px) {
+    .showcase-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .showcase-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.02);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .showcase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+
+  .showcase-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .showcase-card p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .showcase-card .explore-link {
+    color: var(--brand-orange);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: gap 0.2s;
+  }
+
+  .showcase-card:hover .explore-link {
+    gap: 0.5rem;
+  }
+
+  /* CV Card */
+  .cv-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+
+  .cv-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+  }
+
+  .cv-info p {
+    margin: 0;
+    color: #666666;
+    font-size: 14px;
+  }
+
+  .cv-btn {
+    background: var(--brand-orange);
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(217, 77, 67, 0.2);
+    display: inline-block;
+  }
+
+  .cv-btn:hover {
+    background: #bf3f36;
+    transform: translateY(-1px);
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
+  }
+</style>
 ```
 
-#### Research Data Analyst • Monitoring & Evaluation Specialist
-3+ experience in turning program data into actionable insights for public health, research and development programs.
 
-### 🛠️ What I work with
+```{=html}
+<div class="portfolio-container">
+  <div class="profile-sidebar">
+    <div class="avatar-frame">
+      <img src="images/roy.jpg" alt="Roy Mwavita">
+    </div>
+    
+    <h1>Roy Mwavita</h1>
+    <h4>Research Data Analyst • Monitoring & Evaluation Specialist</h4>
+    <p>2+ years of experience turning program data into actionable insights for public health, research and development programs.</p>
+    
+    <div class="sidebar-socials">
+      <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+    
+    <div class="sidebar-skills-title">🛠️ What I work with</div>
+    <div class="sidebar-badges">
+      <span class="sidebar-badge">R</span>
+      <span class="sidebar-badge">Shiny</span>
+      <span class="sidebar-badge">Quarto</span>
+      <span class="sidebar-badge">KoboToolbox</span>
+      <span class="sidebar-badge">ODK</span>
+      <span class="sidebar-badge">RedCap</span>
+      <span class="sidebar-badge">Python</span>
+      <span class="sidebar-badge">Power BI</span>
+      <span class="sidebar-badge">Excel</span>
+      <span class="sidebar-badge">SQL (basic)</span>
+      <span class="sidebar-badge">Data Quality Systems</span>
+      <span class="sidebar-badge">M&E Frameworks</span>
+    </div>
+  </div>
 
-<div class="badges">
-  <span class="badge">R</span>
-  <span class="badge">Shiny</span>
-  <span class="badge">Quarto</span>
-  <span class="badge">KoboToolbox</span>
-  <span class="badge">ODK</span>
-  <span class="badge">RedCap</span>
-  <span class="badge">Python</span>
-  <span class="badge">Power BI</span>
-  <span class="badge">Excel</span>
-  <span class="badge">SQL (basic)</span>
-  <span class="badge">Data Quality Systems</span>
-  <span class="badge">M&E Frameworks</span>
+  <div class="content-showcase">
+    
+    <nav class="sidebar-nav">
+      <a href="index.qmd" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.qmd"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="dashboards.qmd"><i class="fas fa-chart-pie"></i> Dashboards</a>
+      <a href="digest.qmd"><i class="fas fa-book-open"></i> R Toolkit Digest</a>
+      <a href="newsletter.qmd"><i class="fas fa-paper-plane"></i> Newsletter</a>
+    </nav>
+
+    <div class="showcase-section-title">Featured Areas</div>
+    
+    <div class="showcase-grid">
+      <div class="showcase-card">
+        <div>
+          <h3>🧩 Projects</h3>
+          <p>Data systems, automation tools, and analytics solutions developed for health and development programs.</p>
+        </div>
+        <a href="projects.qmd" class="explore-link">Explore →</a>
+      </div>
+
+      <div class="showcase-card">
+        <div>
+          <h3>📊 Dashboards</h3>
+          <p>Interactive Shiny applications for program monitoring, data quality assessment, and performance tracking.</p>
+        </div>
+        <a href="dashboards.qmd" class="explore-link">Explore →</a>
+      </div>
+
+      <div class="showcase-card">
+        <div>
+          <h3>📘 R Toolkit Digest</h3>
+          <p>Practical R programming tutorials focused on real-world MEAL and analytics workflows.</p>
+        </div>
+        <a href="digest.qmd" class="explore-link">Explore →</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="cv-card">
+      <div class="cv-info">
+        <h3>📄 CV / Resume</h3>
+        <p>Download my detailed CV for a complete overview of experience, certifications, and publications.</p>
+      </div>
+      <a href="files/CV_Roy%20Mwavita.pdf" class="cv-btn" target="_blank">
+        <i class="fas fa-download"></i> Download CV
+      </a>
+    </div>
+  </div>
+  
+  <hr>
+<div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
+  <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
-
-
-:::
-:::
-
----
-
-## Featured Areas
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-::: {.feature-card}
-
-### 🧩 Projects
-
-Data systems, automation tools, and analytics solutions developed for health and development programs.
-
-[Explore →](projects.qmd)
-
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.feature-card}
-
-### 📊 Dashboards
-
-Interactive Shiny applications for program monitoring, data quality assessment, and performance tracking.
-
-[Explore →](dashboards.qmd)
-
-:::
-:::
-
-::: {.g-col-12 .g-col-md-4}
-::: {.feature-card}
-
-### 📘 R Toolkit Digest
-
-Practical R programming tutorials focused on real-world MEAL and analytics workflows.
-
-[Explore →](digest.qmd)
-
-:::
-:::
-
-:::
-
-
----
-
-## CV
-<div class="hero-buttons">
-
-[Download CV](files/CV_Roy%20Mwavita.pdf){.btn .btn-secondary target="_blank"}
-
 </div>
+```
