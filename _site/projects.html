@@ -627,8 +627,8 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         <li>Real-time monitoring indicators</li>
         <li>Automated reporting summaries</li>
       </ul>
-  
-      <img src="images/binti_dashboard.png" alt="Binti Imara Dashboard">
+      
+      <img src="images/bii_worflow.png" alt="Binti Imara Workflow">
   
       <hr>
   
@@ -940,7 +940,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/roy-mwavita0\.github\.io\/portfolio\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
