@@ -363,7 +363,7 @@ page-layout: full
       <a href="index.qmd" class="active"><i class="fas fa-home"></i> Home</a>
       <a href="projects.qmd"><i class="fas fa-project-diagram"></i> Projects</a>
       <a href="dashboards.qmd"><i class="fas fa-chart-pie"></i> Dashboards</a>
-      <a href="digest.qmd"><i class="fas fa-book-open"></i> R Toolkit Digest</a>
+      <a href="digest.qmd"><i class="fas fa-book-open"></i> R Digest</a>
       <a href="newsletter.qmd"><i class="fas fa-paper-plane"></i> Newsletter</a>
     </nav>
 
@@ -388,7 +388,7 @@ page-layout: full
 
       <div class="showcase-card">
         <div>
-          <h3>📘 R Toolkit Digest</h3>
+          <h3>📘 R Digest</h3>
           <p>Practical R programming tutorials focused on real-world MEAL and analytics workflows.</p>
         </div>
         <a href="digest.qmd" class="explore-link">Explore →</a>
