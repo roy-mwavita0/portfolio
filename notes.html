@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About – Roy Mwavita</title>
+<title>notes – Roy Mwavita</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -24,41 +24,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -84,28 +49,273 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="About – Roy Mwavita">
+<meta property="og:title" content="Roy Mwavita">
 <meta property="og:site_name" content="Roy Mwavita">
-<meta name="twitter:title" content="About – Roy Mwavita">
+<meta name="twitter:title" content="Roy Mwavita">
 <meta name="twitter:card" content="summary">
 </head>
 
 <body>
 
 
-<header id="title-block-header">
-<h1 class="title">About</h1>
-
-</header>
 
 
-<p>About this site</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+
+<!-- Add Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  :root {
+    --brand-orange: #d94d43;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --bg-cream: #f6f4ee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif; background: var(--bg-cream); }
+
+  .portfolio-container { display: grid; grid-template-columns: 1fr; min-height: 100vh; }
+  @media (min-width: 992px) { .portfolio-container { grid-template-columns: 1.2fr 3.8fr; } }
+
+  .profile-sidebar {
+    background-color: var(--brand-orange);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .avatar-frame { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 3px solid rgba(255,255,255,0.4); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  .avatar-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .profile-sidebar h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-light); line-height: 1.2; }
+  .profile-sidebar h4 { font-size: 1rem; font-weight: 400; opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.4; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem; width: 100%; }
+  .profile-sidebar p { font-size: 14px; line-height: 1.6; opacity: 0.85; margin-bottom: 2rem; text-align: left; }
+  .sidebar-socials { display: flex; gap: 1.5rem; margin-bottom: 2rem; font-size: 1.5rem; }
+  .sidebar-socials a { color: var(--text-light); opacity: 0.85; transition: opacity 0.2s, transform 0.2s; }
+  .sidebar-socials a:hover { opacity: 1; transform: scale(1.1); }
+  .sidebar-skills-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; opacity: 0.8; width: 100%; text-align: left; font-weight: 600; }
+  .sidebar-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-start; width: 100%; }
+  .sidebar-badge { background: rgba(255,255,255,0.15); color: var(--text-light); padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.1); }
+
+  .content-showcase { background-color: var(--bg-cream); padding: 4rem 3rem; }
+  @media (max-width: 768px) { .content-showcase { padding: 2rem 1.5rem; } }
+
+  .sidebar-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .sidebar-nav a { color: #555555; text-decoration: none; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 30px; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .sidebar-nav a:hover { color: var(--brand-orange); background: #ffffff; border-color: var(--brand-orange); transform: translateY(-1px); }
+  .sidebar-nav a.active { color: #ffffff; background: var(--brand-orange); border-color: var(--brand-orange); font-weight: 600; box-shadow: 0 4px 12px rgba(217,77,67,0.25); }
+
+  .notes-header { margin-bottom: 0.5rem; }
+  .notes-header h2 { font-size: 1.8rem; font-weight: 700; color: var(--text-dark); }
+  .notes-sub { color: #777; font-size: 14px; margin-bottom: 2.5rem; max-width: 560px; line-height: 1.6; }
+
+  /* ---- Thread stack grid ---- */
+  .thread-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+  }
+  @media (max-width: 992px) { .thread-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 768px) { .thread-grid { grid-template-columns: 1fr; } }
+
+  /* The "stack" is a fan of index cards behind the top card — depth = more entries in the thread */
+  .thread-stack {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 1.4rem; /* room for the fanned layers to peek out */
+  }
+  .thread-stack:focus-visible { outline: 2px solid var(--brand-orange); outline-offset: 4px; border-radius: 16px; }
+
+  .stack-layer {
+    position: absolute;
+    inset: 0;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.04);
+  }
+  .stack-layer.l2 { transform: rotate(-4deg) translateY(10px); opacity: 0.55; z-index: 1; }
+  .stack-layer.l1 { transform: rotate(3deg) translateY(6px); opacity: 0.8; z-index: 2; }
+
+  .stack-top {
+    position: relative;
+    z-index: 3;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.6rem 1.5rem 1.4rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.03);
+    border-top: 4px solid var(--brand-orange);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .thread-stack:hover .stack-top { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.09); }
+  .thread-stack:hover .stack-layer.l1 { transform: rotate(4deg) translateY(9px); }
+  .thread-stack:hover .stack-layer.l2 { transform: rotate(-5deg) translateY(14px); }
+
+  .stack-top .emoji { font-size: 1.6rem; margin-bottom: 0.6rem; display: block; }
+  .stack-top h3 { font-size: 1.05rem; color: var(--text-dark); margin-bottom: 0.5rem; line-height: 1.35; }
+  .stack-top .latest-preview { color: #777; font-size: 13px; line-height: 1.5; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+  .stack-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+  .stack-tags span { background: var(--bg-cream); color: #886; color: #8a7a6f; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 20px; }
+
+  .stack-meta { display: flex; align-items: center; justify-content: space-between; font-size: 12px; color: #999; border-top: 1px solid rgba(0,0,0,0.06); padding-top: 0.75rem; }
+  .stack-count { color: var(--brand-orange); font-weight: 700; }
+
+  .notes-empty { color: #888; font-size: 14px; padding: 2rem 0; }
+
+  hr { margin: 2rem 0; border: none; border-top: 1px solid rgba(0,0,0,0.1); }
+  
+  .side-by-side {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.side-by-side .img-col {
+  flex: 0 0 30%;
+}
+.side-by-side .text-col {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .side-by-side { flex-direction: column; }
+  .side-by-side .img-col { flex: 0 0 100%; margin-bottom: 1rem; }
+}
+</style>
+<div class="portfolio-container">
+  <div class="profile-sidebar">
+    <div class="avatar-frame">
+      <img src="images/roy.jpg" alt="Roy Mwavita">
+    </div>
+
+    <h1>Roy Mwavita</h1>
+    <h4 class="anchored">Research Data Analyst • Monitoring &amp; Evaluation Specialist</h4>
+
+    <div class="sidebar-socials">
+      <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+  </div>
+
+  <div class="content-showcase">
+
+    <nav class="sidebar-nav">
+      <a href="./index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="./dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
+      <a href="./notes.html" class="active"><i class="fas fa-paper-plane"></i> Blog</a>
+    </nav>
+
+    <div class="notes-header">
+      <h2 class="anchored">📝 Notes</h2>
+    </div>
+    <p class="notes-sub">Running threads on things I'm learning. Each card is a topic I keep coming back to and adding to as I go, not a one-off post. Click a stack to follow the whole thread in order.</p>
+
+    <div id="thread-grid" class="thread-grid">
+      <p class="notes-empty">Loading threads…</p>
+    </div>
+
+  </div>
+
+  <hr>
+  <div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
+    <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
+  </div>
 </div>
-</div>
+<script>
+(function () {
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function fmtDate(d) {
+    const hasTime = /T\d{2}:\d{2}/.test(d);
+    const dt = new Date(hasTime ? d : d + "T00:00:00");
+    if (isNaN(dt)) return d;
+    const dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    if (!hasTime) return dateStr;
+    const timeStr = dt.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    return `${dateStr} · ${timeStr}`;
+  }
+
+  // Strips markdown formatting out of preview text so raw ``` / ** / [] markers never leak onto cards
+  function previewText(text) {
+    const hasCode = /```/.test(text);
+    const cleaned = String(text)
+      .replace(/```(\w+)?\n[\s\S]*?```/g, "")
+      .replace(/\[(.*?)\]\(.*?\)/g, "$1")
+      .replace(/[*_`#>]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    return cleaned + (hasCode ? "  💻" : "");
+  }
+
+  fetch("data/threads.json")
+    .then((r) => r.json())
+    .then((data) => {
+      const grid = document.getElementById("thread-grid");
+      const threads = (data.threads || []).slice();
+
+      // Sort by most recently updated thread first
+      threads.sort((a, b) => {
+        const aLast = a.entries[a.entries.length - 1].date;
+        const bLast = b.entries[b.entries.length - 1].date;
+        return new Date(bLast) - new Date(aLast);
+      });
+
+      if (threads.length === 0) {
+        grid.innerHTML = '<p class="notes-empty">No threads yet — the first one is on its way.</p>';
+        return;
+      }
+
+      grid.innerHTML = threads
+        .map((t) => {
+          const count = t.entries.length;
+          const latest = t.entries[t.entries.length - 1];
+          const tags = (t.tags || [])
+            .slice(0, 3)
+            .map((tag) => `<span>${escapeHtml(tag)}</span>`)
+            .join("");
+
+          // Depth of the fan reflects how many entries the thread actually has
+          const layer1 = count > 1 ? '<div class="stack-layer l1"></div>' : "";
+          const layer2 = count > 2 ? '<div class="stack-layer l2"></div>' : "";
+
+          return `
+            <a class="thread-stack" href="thread.html?id=${encodeURIComponent(t.id)}" aria-label="Open thread: ${escapeHtml(t.title)}, ${count} part${count === 1 ? "" : "s"}">
+              ${layer2}
+              ${layer1}
+              <div class="stack-top">
+                <span class="emoji">${t.emoji || "🧵"}</span>
+                <h3>${escapeHtml(t.title)}</h3>
+                <p class="latest-preview">${escapeHtml(latest.heading)} — ${escapeHtml(previewText(latest.content))}</p>
+                <div class="stack-tags">${tags}</div>
+                <div class="stack-meta">
+                  <span class="stack-count">🧵 ${count} part${count === 1 ? "" : "s"}</span>
+                  <span>updated ${fmtDate(latest.date)}</span>
+                </div>
+              </div>
+            </a>`;
+        })
+        .join("");
+    })
+    .catch(() => {
+      document.getElementById("thread-grid").innerHTML =
+        '<p class="notes-empty">Couldn\'t load threads right now — check data/threads.json.</p>';
+    });
+})();
+</script>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
