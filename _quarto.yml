@@ -1,6 +1,8 @@
 project:
   type: website
-
+  resources:
+    - "data/**"
+    - "images/**"
 website:
   title: "Roy Mwavita"
   google-analytics: "G-XNMP9FSHZH"

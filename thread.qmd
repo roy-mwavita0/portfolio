@@ -1,0 +1,518 @@
+---
+page-layout: full
+---
+
+```{=html}
+<!-- Add Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<style>
+  :root {
+    --brand-orange: #d94d43;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --bg-cream: #f6f4ee;
+    --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif; background: var(--bg-cream); }
+
+  .portfolio-container { display: grid; grid-template-columns: 1fr; min-height: 100vh; }
+  @media (min-width: 992px) { .portfolio-container { grid-template-columns: 1.2fr 3.8fr; } }
+
+  .profile-sidebar {
+    background-color: var(--brand-orange);
+    color: var(--text-light);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .avatar-frame { width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin-bottom: 1.5rem; border: 3px solid rgba(255,255,255,0.4); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  .avatar-frame img { width: 100%; height: 100%; object-fit: cover; }
+  .profile-sidebar h1 { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-light); line-height: 1.2; }
+  .profile-sidebar h4 { font-size: 1rem; font-weight: 400; opacity: 0.9; margin-bottom: 1.5rem; line-height: 1.4; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1.5rem; width: 100%; }
+  .profile-sidebar p { font-size: 14px; line-height: 1.6; opacity: 0.85; margin-bottom: 2rem; text-align: left; }
+  .sidebar-socials { display: flex; gap: 1.5rem; margin-bottom: 2rem; font-size: 1.5rem; }
+  .sidebar-socials a { color: var(--text-light); opacity: 0.85; transition: opacity 0.2s, transform 0.2s; }
+  .sidebar-socials a:hover { opacity: 1; transform: scale(1.1); }
+  .sidebar-skills-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; opacity: 0.8; width: 100%; text-align: left; font-weight: 600; }
+  .sidebar-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: flex-start; width: 100%; }
+  .sidebar-badge { background: rgba(255,255,255,0.15); color: var(--text-light); padding: 6px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.1); }
+
+  .content-showcase { background-color: var(--bg-cream); padding: 4rem 3rem; }
+  @media (max-width: 768px) { .content-showcase { padding: 2rem 1.5rem; } }
+
+  .sidebar-nav { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.08); }
+  .sidebar-nav a { color: #555555; text-decoration: none; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 30px; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); transition: all 0.2s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+  .sidebar-nav a:hover { color: var(--brand-orange); background: #ffffff; border-color: var(--brand-orange); transform: translateY(-1px); }
+  .sidebar-nav a.active { color: #ffffff; background: var(--brand-orange); border-color: var(--brand-orange); font-weight: 600; box-shadow: 0 4px 12px rgba(217,77,67,0.25); }
+
+  .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #888; font-size: 13px; text-decoration: none; margin-bottom: 1.5rem; }
+  .back-link:hover { color: var(--brand-orange); }
+
+  .thread-header { margin-bottom: 0.5rem; display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; }
+  .thread-header .emoji { font-size: 1.7rem; }
+  .thread-header h2 { font-size: 1.7rem; font-weight: 700; color: var(--text-dark); }
+
+  .thread-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.75rem 0 2.5rem; }
+  .thread-tags span { background: #ffffff; border: 1px solid rgba(0,0,0,0.06); color: #886a5f; font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 20px; }
+
+  /* ---- The flow: a connected vertical timeline of entries ---- */
+  .flow { position: relative; padding-left: 2.6rem; }
+  .flow::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--brand-orange), rgba(217,77,67,0.15));
+  }
+
+  .thread-empty { color: #888; font-size: 14px; padding: 2rem 0; }
+
+  hr { margin: 2rem 0; border: none; border-top: 1px solid rgba(0,0,0,0.1); }
+  
+  /* ---- Code + output blocks inside an entry ---- */
+  .code-block {
+    margin: 0 0 0.9rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    border: 1px solid rgba(0,0,0,0.06);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .code-block code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+
+  .output-block {
+    margin: 0 0 0.9rem;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #2b2b2b;
+  }
+  .output-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #bbb;
+    background: #222;
+    padding: 6px 14px;
+  }
+  .output-block pre {
+    margin: 0;
+    padding: 12px 14px;
+    color: #e8e8e8;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* ---- Accordion-style collapsible styles ---- */
+  .flow-entry {
+    position: relative;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .flow-entry .flow-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 0 1.8rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.03);
+    margin-top: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 1.8rem;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+
+  .flow-entry.expanded .flow-card {
+    max-height: 2000px;
+    opacity: 1;
+    padding: 1.6rem 1.8rem;
+    transform: translateY(0);
+  }
+
+  .flow-entry .flow-marker {
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    z-index: 10;
+    position: absolute;
+    left: -2.6rem;
+    top: 0.35rem;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--brand-orange);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 4px var(--bg-cream);
+  }
+
+  .flow-entry .flow-marker:hover {
+    transform: scale(1.15);
+  }
+
+  .flow-entry.collapsed .flow-marker {
+    background: #999;
+  }
+
+  .flow-entry.expanded .flow-marker {
+    background: var(--brand-orange);
+  }
+
+  .flow-entry .flow-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    user-select: none;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  .flow-entry .flow-header:hover {
+    background: rgba(217, 77, 67, 0.05);
+  }
+
+  .flow-entry .flow-header:hover .flow-date,
+  .flow-entry .flow-header:hover h3 {
+    color: var(--brand-orange);
+  }
+
+  .flow-entry .flow-header h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+    flex: 1;
+  }
+
+  .flow-entry .flow-header .flow-date {
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+  }
+
+  .flow-entry .flow-header .toggle-icon {
+    font-size: 14px;
+    color: #bbb;
+    transition: transform 0.3s ease, color 0.2s ease;
+    flex-shrink: 0;
+    margin-left: 0.5rem;
+  }
+
+  .flow-entry.expanded .flow-header .toggle-icon {
+    transform: rotate(180deg);
+    color: var(--brand-orange);
+  }
+
+  .flow-entry.collapsed .flow-header .toggle-icon {
+    transform: rotate(0deg);
+    color: #bbb;
+  }
+
+  .flow-card p { font-size: 14px; line-height: 1.7; color: #555; margin-bottom: 0.9rem; }
+  .flow-card p:last-child { margin-bottom: 0; }
+  .flow-card ul, .flow-card ol { margin: 0 0 0.9rem 1.2rem; font-size: 14px; line-height: 1.7; color: #555; }
+  .flow-card li { margin-bottom: 0.25rem; }
+  .flow-card a { color: var(--brand-orange); }
+  .flow-card strong { color: var(--text-dark); }
+  .flow-card h1, .flow-card h2, .flow-card h3, .flow-card h4 { color: var(--text-dark); margin: 1.2rem 0 0.6rem; }
+  .flow-card > *:first-child { margin-top: 0; }
+  .flow-card code:not(pre code) { background: var(--bg-cream); padding: 2px 6px; border-radius: 4px; font-size: 13px; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+  .flow-card blockquote { border-left: 3px solid var(--brand-orange); padding-left: 1rem; margin: 0 0 0.9rem; color: #777; font-style: italic; }
+
+  /* Side-by-side layout - image left, text right */
+  .side-by-side {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin: 0.5rem 0 1.5rem;
+  }
+  
+  .side-by-side .img-col {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  
+  .side-by-side .img-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: block;
+  }
+  
+  .side-by-side .text-col {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .side-by-side .text-col p {
+    margin-top: 0;
+  }
+  
+  .side-by-side .text-col p:last-child {
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .side-by-side {
+      flex-direction: column;
+    }
+    .side-by-side .img-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .side-by-side .img-col img {
+      max-width: 100%;
+    }
+  }
+</style>
+```
+
+```{=html}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/r.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+```
+
+```{=html}
+<div class="portfolio-container">
+  <div class="profile-sidebar">
+    <div class="avatar-frame">
+      <img src="images/roy.jpg" alt="Roy Mwavita">
+    </div>
+
+    <h1>Roy Mwavita</h1>
+    <h4>Research Data Analyst • Monitoring & Evaluation Specialist</h4>
+
+    <div class="sidebar-socials">
+      <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+
+  </div>
+
+  <div class="content-showcase">
+
+    <nav class="sidebar-nav">
+      <a href="index.qmd"><i class="fas fa-home"></i> Home</a>
+      <a href="projects.qmd"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="dashboards.qmd"><i class="fas fa-chart-pie"></i> Dashboards</a>
+      <a href="notes.qmd" class="active"><i class="fas fa-paper-plane"></i> Blog</a>
+    </nav>
+
+    <a class="back-link" href="notes.qmd"><i class="fas fa-arrow-left"></i> All threads</a>
+
+    <div id="thread-content">
+      <p class="thread-empty">Loading thread…</p>
+    </div>
+
+  </div>
+
+  <hr>
+  <div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
+    <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
+  </div>
+</div>
+```
+
+```{=html}
+<script>
+(function () {
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function fmtDate(d) {
+    const hasTime = /T\d{2}:\d{2}/.test(d);
+    const dt = new Date(hasTime ? d : d + "T00:00:00");
+    if (isNaN(dt)) return d;
+    const dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    if (!hasTime) return dateStr;
+    const timeStr = dt.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    return `${dateStr} · ${timeStr}`;
+  }
+
+  // Markdown renderer with custom image handling
+  function renderMarkdown(text) {
+    if (window.marked) {
+      const renderer = new marked.Renderer();
+      
+      // Custom image rendering to handle paths correctly
+      renderer.image = function(href, title, text) {
+        let imgPath = href;
+        if (!href.startsWith('http') && !href.startsWith('data:')) {
+          if (href.startsWith('/')) {
+            imgPath = href;
+          } else {
+            imgPath = '/' + href;
+          }
+        }
+        return `<img src="${imgPath}" alt="${text || ''}" title="${title || ''}" style="max-width:100%;border-radius:8px;border:1px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,0.1);">`;
+      };
+      
+      // Preserve HTML in paragraphs
+      renderer.paragraph = function(text) {
+        if (/<[a-z][\s\S]*>/i.test(text)) {
+          return text;
+        }
+        return `<p>${text}</p>`;
+      };
+      
+      try {
+        return marked.parse(String(text), { 
+          breaks: true, 
+          mangle: false, 
+          headerIds: false,
+          renderer: renderer
+        });
+      } catch (e) {
+        console.error('Markdown parse error:', e);
+        return String(text);
+      }
+    }
+    // Fallback
+    return String(text)
+      .split(/\n\s*\n/)
+      .map((p) => `<p>${escapeHtml(p.trim())}</p>`)
+      .join("");
+  }
+
+  // After content is in the DOM: turn ```output code blocks into styled result cells,
+  // and run syntax highlighting on everything else.
+  function postProcessCode(scope) {
+    scope.querySelectorAll("pre code").forEach((code) => {
+      const pre = code.parentElement;
+      if (code.classList.contains("language-output") || code.classList.contains("language-out")) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "output-block";
+        const label = document.createElement("div");
+        label.className = "output-label";
+        label.textContent = "Output";
+        const outPre = document.createElement("pre");
+        outPre.textContent = code.textContent;
+        wrapper.appendChild(label);
+        wrapper.appendChild(outPre);
+        pre.replaceWith(wrapper);
+      } else {
+        pre.classList.add("code-block");
+        if (window.hljs) hljs.highlightElement(code);
+      }
+    });
+  }
+
+  // Accordion-style toggle: only one entry expanded at a time
+  window.toggleEntry = function(marker) {
+    const entry = marker.closest('.flow-entry');
+    if (!entry) return;
+    
+    const isExpanded = entry.classList.contains('expanded');
+    
+    // Collapse all entries first (accordion behavior)
+    document.querySelectorAll('.flow-entry').forEach(el => {
+      el.classList.remove('expanded');
+      el.classList.add('collapsed');
+    });
+    
+    // If the clicked entry was not expanded, expand it
+    if (!isExpanded) {
+      entry.classList.remove('collapsed');
+      entry.classList.add('expanded');
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const container = document.getElementById("thread-content");
+
+  if (!id) {
+    container.innerHTML = '<p class="thread-empty">No thread specified. <a href="notes.qmd">Go back to all threads</a>.</p>';
+    return;
+  }
+
+  fetch("data/threads.json")
+    .then((r) => {
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      return r.json();
+    })
+    .then((data) => {
+      const thread = (data.threads || []).find((t) => t.id === id);
+
+      if (!thread) {
+        container.innerHTML = '<p class="thread-empty">Couldn\'t find that thread. <a href="notes.qmd">Go back to all threads</a>.</p>';
+        return;
+      }
+
+      document.title = thread.title;
+
+      const tags = (thread.tags || [])
+        .map((tag) => `<span>${escapeHtml(tag)}</span>`)
+        .join("");
+
+      // Render entries with accordion-style collapsible functionality
+      const entries = thread.entries
+        .map((e, i) => {
+          const renderedContent = renderMarkdown(e.content);
+          const isFirst = i === 0; // First entry expanded by default
+          
+          return `
+            <div class="flow-entry ${isFirst ? 'expanded' : 'collapsed'}" data-index="${i}">
+              <div class="flow-marker" onclick="toggleEntry(this)">
+                ${i + 1}
+              </div>
+              <div class="flow-header" onclick="toggleEntry(this.closest('.flow-entry').querySelector('.flow-marker'))">
+                <span class="flow-date">${fmtDate(e.date)}</span>
+                <h3>${escapeHtml(e.heading)}</h3>
+                <span class="toggle-icon">▼</span>
+              </div>
+              <div class="flow-card">
+                ${renderedContent}
+              </div>
+            </div>`;
+        })
+        .join("");
+
+      container.innerHTML = `
+        <div class="thread-header">
+          <span class="emoji">${thread.emoji || "🧵"}</span>
+          <h2>${escapeHtml(thread.title)}</h2>
+        </div>
+        <div class="thread-tags">${tags}</div>
+        <div class="flow">${entries}</div>
+      `;
+
+      postProcessCode(container);
+    })
+    .catch((err) => {
+      console.error('Error:', err);
+      container.innerHTML = `<p class="thread-empty">Error loading thread: ${err.message}</p>`;
+    });
+})();
+</script>
+```

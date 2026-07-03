@@ -16,5 +16,38 @@
   },
   "projects.qmd": {
     "projects.html": "caeb6df1"
+  },
+  "notes/webscraping/part1.qmd": {
+    "part1.html": "9601cd72"
+  },
+  "notes.qmd": {
+    "notes.html": "6b067008"
+  },
+  "notes/rprogramming/r1.qmd": {
+    "r1.html": "743fba92"
+  },
+  "notes/webscraping/part2.qmd": {
+    "part2.html": "79174158"
+  },
+  "notes/r1.qmd": {
+    "r1.html": "30914a87"
+  },
+  "notes/webscraping1.qmd": {
+    "webscraping1.html": "1e483edb"
+  },
+  "notes/webscraping2.qmd": {
+    "webscraping2.html": "d84cfdfa"
+  },
+  "notes/learning-r-part-1.qmd": {
+    "learning-r-part-1.html": "ac2355a6"
+  },
+  "notes/web-scraping-1.qmd": {
+    "web-scraping-1.html": "f912bb07"
+  },
+  "notes/web-scraping-2.qmd": {
+    "web-scraping-2.html": "2cf52885"
+  },
+  "thread.qmd": {
+    "thread.html": "e20f3a2f"
   }
 }

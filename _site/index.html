@@ -61,6 +61,9 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
 
 
 
+<!-- Add Font Awesome CDN for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 <style>
   /* Root Theme Configuration matching the topmate aesthetic */
   :root {
@@ -141,14 +144,6 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     width: 100%;
   }
 
-  .profile-sidebar p {
-    font-size: 14px;
-    line-height: 1.6;
-    opacity: 0.85;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
   /* Vertical Sidebar Social Links Block */
   .sidebar-socials {
     display: flex;
@@ -166,37 +161,6 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
   .sidebar-socials a:hover {
     opacity: 1;
     transform: scale(1.1);
-  }
-
-  /* Sidebar Skill Badges Content Block */
-  .sidebar-skills-title {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    opacity: 0.8;
-    width: 100%;
-    text-align: left;
-    font-weight: 600;
-  }
-
-  .sidebar-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .sidebar-badge {
-    background: rgba(255, 255, 255, 0.15);
-    color: var(--text-light);
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   /* 3/4 Right Panel: Main Dashboard Content Area */
@@ -260,22 +224,51 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     position: relative;
   }
 
-  /* FIXED: Content Cards - 3 columns in one row */
+  /* Profile summary card */
+  .profile-summary {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.02);
+  }
+
+  .profile-summary .experience-text {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .profile-summary .skills-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .profile-summary .skill-tag {
+    background: var(--bg-cream);
+    color: #444;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .profile-summary .skill-tag.highlight {
+    background: var(--brand-orange);
+    color: #ffffff;
+  }
+
+  /* Content Cards */
   .showcase-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
   }
 
-  /* On tablets, show 2 columns */
-  @media (max-width: 992px) {
-    .showcase-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  /* On mobile, show 1 column */
   @media (max-width: 768px) {
     .showcase-grid {
       grid-template-columns: 1fr;
@@ -311,6 +304,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    flex-grow: 1;
   }
 
   .showcase-card .explore-link {
@@ -322,10 +316,6 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     align-items: center;
     gap: 0.25rem;
     transition: gap 0.2s;
-  }
-
-  .showcase-card:hover .explore-link {
-    gap: 0.5rem;
   }
 
   /* CV Card */
@@ -366,17 +356,6 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     box-shadow: 0 4px 10px rgba(217, 77, 67, 0.2);
     display: inline-block;
   }
-
-  .cv-btn:hover {
-    background: #bf3f36;
-    transform: translateY(-1px);
-  }
-
-  hr {
-    margin: 2rem 0;
-    border: none;
-    border-top: 1px solid rgba(0,0,0,0.1);
-  }
 </style>
 <div class="portfolio-container">
   <div class="profile-sidebar">
@@ -386,29 +365,13 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     
     <h1>Roy Mwavita</h1>
     <h4 class="anchored">Research Data Analyst • Monitoring &amp; Evaluation Specialist</h4>
-    <p>2+ years of experience turning program data into actionable insights for public health, research and development programs.</p>
-    
+
     <div class="sidebar-socials">
       <a href="https://github.com/roy-mwavita0" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
     
-    <div class="sidebar-skills-title">🛠️ What I work with</div>
-    <div class="sidebar-badges">
-      <span class="sidebar-badge">R</span>
-      <span class="sidebar-badge">Shiny</span>
-      <span class="sidebar-badge">Quarto</span>
-      <span class="sidebar-badge">KoboToolbox</span>
-      <span class="sidebar-badge">ODK</span>
-      <span class="sidebar-badge">RedCap</span>
-      <span class="sidebar-badge">Python</span>
-      <span class="sidebar-badge">Power BI</span>
-      <span class="sidebar-badge">Excel</span>
-      <span class="sidebar-badge">SQL (basic)</span>
-      <span class="sidebar-badge">Data Quality Systems</span>
-      <span class="sidebar-badge">M&amp;E Frameworks</span>
-    </div>
   </div>
 
   <div class="content-showcase">
@@ -417,9 +380,25 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
       <a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a>
       <a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
       <a href="./dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
-      <a href="./digest.html"><i class="fas fa-book-open"></i> R Digest</a>
-      <a href="./newsletter.html"><i class="fas fa-paper-plane"></i> Newsletter</a>
+      <a href="./notes.html"><i class="fas fa-paper-plane"></i> Blog</a>
     </nav>
+
+    <!-- Profile Summary - Moved to top -->
+    <div class="profile-summary">
+      <div class="experience-text">
+        <strong>2+ years</strong> of experience turning program data into actionable insights for public health, research and development programs. Passionate about building data systems that drive impact in communities.
+      </div>
+      <div class="skills-preview">
+        <span class="skill-tag highlight">R</span>
+        <span class="skill-tag">Shiny</span>
+        <span class="skill-tag">Quarto</span>
+        <span class="skill-tag">KoboToolbox</span>
+        <span class="skill-tag">ODK</span>
+        <span class="skill-tag">RedCap</span>
+        <span class="skill-tag">Power BI</span>
+        <span class="skill-tag">M&amp;E Frameworks</span>
+      </div>
+    </div>
 
     <div class="showcase-section-title">Featured Areas</div>
     
@@ -428,24 +407,20 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         <div>
           <h3 class="anchored">🧩 Projects</h3>
           <p>Data systems, automation tools, and analytics solutions developed for health and development programs.</p>
+          
+          <!-- Recent project preview -->
         </div>
         <a href="./projects.html" class="explore-link">Explore →</a>
       </div>
 
       <div class="showcase-card">
         <div>
-          <h3 class="anchored">📊 Dashboards</h3>
-          <p>Interactive Shiny applications for program monitoring, data quality assessment, and performance tracking.</p>
+          <h3 class="anchored">✍️ Blog</h3>
+          <p>Learning threads, tutorials, and reflections on data analytics, R programming, and MEAL workflows.</p>
+          
+          <!-- Recent blog preview -->
         </div>
-        <a href="./dashboards.html" class="explore-link">Explore →</a>
-      </div>
-
-      <div class="showcase-card">
-        <div>
-          <h3 class="anchored">📘 R Digest</h3>
-          <p>Practical R programming tutorials focused on real-world MEAL and analytics workflows.</p>
-        </div>
-        <a href="./digest.html" class="explore-link">Explore →</a>
+        <a href="./notes.html" class="explore-link">Explore →</a>
       </div>
     </div>
 

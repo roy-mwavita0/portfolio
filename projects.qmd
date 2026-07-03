@@ -418,8 +418,7 @@ page-layout: full
       <a href="index.html"><i class="fas fa-home"></i> Home</a>
       <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
       <a href="dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
-      <a href="digest.html"><i class="fas fa-book-open"></i> R Digest</a>
-      <a href="newsletter.html"><i class="fas fa-paper-plane"></i> Newsletter</a>
+      <a href="notes.html"><i class="fas fa-book-open"></i> Blog</a>
     </nav>
 
     <div class="showcase-section-title">My Projects</div>

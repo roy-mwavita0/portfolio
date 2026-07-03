@@ -281,8 +281,7 @@ page-layout: full
       <a href="index.qmd"><i class="fas fa-home"></i> Home</a>
       <a href="projects.qmd"><i class="fas fa-project-diagram"></i> Projects</a>
       <a href="dashboards.qmd" class="active"><i class="fas fa-chart-pie"></i> Dashboards</a>
-      <a href="digest.qmd"><i class="fas fa-book-open"></i> R Digest</a>
-      <a href="newsletter.qmd"><i class="fas fa-paper-plane"></i> Newsletter</a>
+      <a href="notes.qmd"><i class="fas fa-book-open"></i> Blog</a>
     </nav>
 
     <div class="showcase-section-title">Interactive Dashboards</div>
