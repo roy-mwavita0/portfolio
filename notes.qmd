@@ -72,6 +72,7 @@ page-layout: full
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+    min-width: 0;
     padding-bottom: 1.4rem; /* room for the fanned layers to peek out */
   }
   .thread-stack:focus-visible { outline: 2px solid var(--brand-orange); outline-offset: 4px; border-radius: 16px; }
@@ -95,6 +96,7 @@ page-layout: full
     box-shadow: var(--card-shadow);
     border: 1px solid rgba(0,0,0,0.03);
     border-top: 4px solid var(--brand-orange);
+    overflow-wrap: break-word;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   .thread-stack:hover .stack-top { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(0,0,0,0.09); }

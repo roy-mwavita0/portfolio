@@ -133,6 +133,19 @@ page-layout: full
     transition: all 0.3s ease;
   }
 
+  /* grid-rows trick: animates smoothly to full content height, no matter how tall, no fixed cap */
+  .flow-entry .flow-card-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition: grid-template-rows 0.4s ease, opacity 0.3s ease;
+  }
+
+  .flow-entry.expanded .flow-card-wrapper {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+
   .flow-entry .flow-card {
     background: #ffffff;
     border-radius: 14px;
@@ -140,21 +153,14 @@ page-layout: full
     box-shadow: var(--card-shadow);
     border: 1px solid rgba(0,0,0,0.03);
     margin-top: 0.5rem;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    padding: 0 1.8rem;
+    min-height: 0;
     min-width: 0;
+    overflow: hidden;
     overflow-wrap: break-word;
-    transform: translateY(-10px);
-    transition: all 0.4s ease;
   }
 
   .flow-entry.expanded .flow-card {
-    max-height: 2000px;
-    opacity: 1;
     padding: 1.6rem 1.8rem;
-    transform: translateY(0);
   }
 
   .flow-entry .flow-marker {
@@ -505,8 +511,10 @@ page-layout: full
                 <h3>${escapeHtml(e.heading)}</h3>
                 <span class="toggle-icon">▼</span>
               </div>
-              <div class="flow-card">
-                ${renderedContent}
+              <div class="flow-card-wrapper">
+                <div class="flow-card">
+                  ${renderedContent}
+                </div>
               </div>
             </div>`;
         })
