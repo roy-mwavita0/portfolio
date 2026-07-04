@@ -464,98 +464,321 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     </div>
   </div>
 
-  <!-- Right Panel Content Showcase -->
-  <div class="content-showcase">
-    <!-- Navigation Menu Block -->
-    <nav class="sidebar-nav">
-      <a href="index.html"><i class="fas fa-home"></i> Home</a>
-      <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
-      <a href="dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
-      <a href="notes.html"><i class="fas fa-book-open"></i> Blog</a>
-    </nav>
+ <!-- Right Panel Content Showcase -->
+<div class="content-showcase">
+  <!-- Navigation Menu Block -->
+  <nav class="sidebar-nav">
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
+    <a href="dashboards.html"><i class="fas fa-chart-pie"></i> Dashboards</a>
+    <a href="notes.html"><i class="fas fa-book-open"></i> Blog</a>
+  </nav>
 
-    <div class="showcase-section-title">My Projects</div>
-    
-    <!-- Projects Matrix Grid Area -->
-    <div class="project-grid">
-    
-      <div class="project-card">
-        <div>
-          <h2 class="anchored">📈 Scalable M&amp;E System for NGO Impact</h2>
-          <p>
-            An end-to-end digital Monitoring &amp; Evaluation system built using
-            KoBoToolbox, R, and Shiny to automate data collection, scoring,
-            reporting, and real-time program monitoring for NGOs and CBOs.
-          </p>
-        </div>
-        <button onclick="openModal('bintiImaraModal')">
-          Read more →
-        </button>
-  </div>
+  <div class="showcase-section-title">My Projects</div>
 
-      <div class="project-card">
-        <div>
-          <h2 class="anchored">📊 Labor Market Uncertainty &amp; Employment Retention</h2>
-          <p>
-            An applied labor economics and behavioral data science case study 
-            modeling the psychological and structural drivers behind "Job Hugging."
-          </p>
-        </div>
-        <button onclick="openModal('jobHuggingModal')">
-          Read more →
-        </button>
+  <!-- Projects Matrix Grid Area -->
+  <div class="project-grid">
+
+    <!-- Card 1: MyJobMag Web Scraping -->
+    <div class="project-card">
+      <div>
+        <h2 class="anchored">🕷️ Automated Job Scraping &amp; Dashboard</h2>
+        <p>
+          An automated web scraping pipeline that extracts job postings
+          from MyJobMag, processes them in R, and displays real-time
+          insights through an interactive Shiny dashboard with filtering,
+          trend analysis, and visualization tools.
+        </p>
       </div>
-
-      <div class="project-card">
-        <div>
-          <h2 class="anchored">🛠️ validationcheck Package</h2>
-          <p>
-            An R package for automated data validation, quality assurance, and
-            reporting in public health and research workflows.
-          </p>
-        </div>
-        <button onclick="openModal('pkgModal')">
-          Read more →
-        </button>
-      </div>
-
-      <div class="project-card">
-        <div>
-          <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
-          <p>
-            Geospatial analysis of Community Health Promoter coverage and household
-            distribution using KoboToolbox, R, and Leaflet.
-          </p>
-        </div>
-        <button onclick="openModal('chpModal')">
-          Read more →
-        </button>
-      </div>
-
+      <button onclick="openModal('myjobmagModal')">
+        Read more →
+      </button>
     </div>
 
-    <!-- MODAL DETAILED WRAPPERS -->
-    
-      <!-- Modal 0: Binti Imara -->
+    <!-- Card 2: Binti Imara -->
+    <div class="project-card">
+      <div>
+        <h2 class="anchored">📈 Scalable M&amp;E System for NGO Impact</h2>
+        <p>
+          An end-to-end digital Monitoring &amp; Evaluation system built using
+          KoBoToolbox, R, and Shiny to automate data collection, scoring,
+          reporting, and real-time program monitoring for NGOs and CBOs.
+        </p>
+      </div>
+      <button onclick="openModal('bintiImaraModal')">
+        Read more →
+      </button>
+    </div>
+
+    <!-- Card 3: Job Hugging -->
+    <div class="project-card">
+      <div>
+        <h2 class="anchored">📊 Labor Market Uncertainty &amp; Employment Retention</h2>
+        <p>
+          An applied labor economics and behavioral data science case study 
+          modeling the psychological and structural drivers behind "Job Hugging."
+        </p>
+      </div>
+      <button onclick="openModal('jobHuggingModal')">
+        Read more →
+      </button>
+    </div>
+
+    <!-- Card 4: validationcheck Package -->
+    <div class="project-card">
+      <div>
+        <h2 class="anchored">🛠️ validationcheck Package</h2>
+        <p>
+          An R package for automated data validation, quality assurance, and
+          reporting in public health and research workflows.
+        </p>
+      </div>
+      <button onclick="openModal('pkgModal')">
+        Read more →
+      </button>
+    </div>
+
+    <!-- Card 5: CHP Geospatial -->
+    <div class="project-card">
+      <div>
+        <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
+        <p>
+          Geospatial analysis of Community Health Promoter coverage and household
+          distribution using KoboToolbox, R, and Leaflet.
+        </p>
+      </div>
+      <button onclick="openModal('chpModal')">
+        Read more →
+      </button>
+    </div>
+
+  </div> <!-- END project-grid -->
+
+  <!-- MODAL DETAILED WRAPPERS -->
+
+  <!-- Modal: MyJobMag Web Scraping Dashboard -->
+  <div id="myjobmagModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('myjobmagModal')">×</span>
+
+      <h2 class="anchored">🕷️ Automated Job Scraping &amp; Dashboard</h2>
+
+      <p><strong>Project Type:</strong> Web Scraping &amp; Interactive Dashboard</p>
+
+      <p><strong>Status:</strong> 🟢 Live Demonstration Project</p>
+
+      <p><strong>Tools &amp; Technologies:</strong>
+        R, rvest, tidyverse, lubridate, Shiny, shinydashboard,
+        highcharter, DT, plotly, wordcloud, tm, waiter, shinyapps.io, GitHub
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">🧠 Problem Statement</h3>
+
+      <p>
+        Job seekers often spend hours manually refreshing job websites,
+        scrolling through cluttered pages, and trying to identify new
+        opportunities. Websites like MyJobMag don't always display
+        vacancies in clear chronological order, and the interface is
+        filled with advertisements that make navigation difficult.
+        This results in wasted time, missed opportunities, and a
+        frustrating job search experience.
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">🎯 Solution</h3>
+
+      <p>
+        I built an automated web scraping pipeline that extracts job
+        postings from MyJobMag, processes them in R, and displays
+        the results through an interactive Shiny dashboard.
+      </p>
+
+      <p>
+        The system scrapes job titles, companies, dates, and links
+        from multiple pages, cleans and structures the data,
+        filters jobs by date range and company, visualizes hiring
+        trends, and provides a clean, ad-free interface for job searching.
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">⚙️ System Architecture</h3>
+
+      <ul>
+        <li>🌐 MyJobMag Website – Source of job postings</li>
+        <li>🕷️ rvest – Web scraping engine</li>
+        <li>🧹 R + tidyverse – Data cleaning and transformation</li>
+        <li>📅 lubridate – Date parsing and filtering</li>
+        <li>📊 Shiny Dashboard – Interactive visualization</li>
+        <li>☁️ shinyapps.io – Cloud deployment</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🕷️ Data Collection Process</h3>
+
+      <p>The scraper performs the following steps:</p>
+
+      <ul>
+        <li><strong>Extracts</strong> job listings from MyJobMag pages</li>
+        <li><strong>Parses</strong> job titles to extract company names from " at " patterns</li>
+        <li><strong>Filters</strong> jobs based on recency (configurable date range)</li>
+        <li><strong>Removes</strong> duplicate entries using unique URLs</li>
+        <li><strong>Stores</strong> the data in a structured format for analysis</li>
+      </ul>
+
+      <p><strong>Data Collected:</strong></p>
+      <ul>
+        <li>Job Title (cleaned)</li>
+        <li>Company Name (extracted from title)</li>
+        <li>Date Posted (parsed and validated)</li>
+        <li>Job URL (complete link)</li>
+        <li>Page Source (for pagination tracking)</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">📊 Dashboard Features</h3>
+
+      <p><strong>Key Metrics:</strong></p>
+      <ul>
+        <li>Total jobs scraped</li>
+        <li>New jobs today</li>
+        <li>Number of hiring companies</li>
+      </ul>
+
+      <p><strong>Visualizations:</strong></p>
+      <ul>
+        <li>📈 Jobs posted over time (trend analysis)</li>
+        <li>🏆 Top hiring companies (bar chart)</li>
+        <li>☁️ Word cloud of job titles (keyword patterns)</li>
+        <li>📅 Jobs by day of week (best days to check)</li>
+      </ul>
+
+      <p><strong>Interactive Filters:</strong></p>
+      <ul>
+        <li>Date range selector</li>
+        <li>Company name filter</li>
+        <li>Real-time data refresh</li>
+      </ul>
+
+      <p><strong>Data Export:</strong></p>
+      <ul>
+        <li>Download filtered results as CSV</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🔧 Technical Highlights</h3>
+
+      <p><strong>Scraping Logic:</strong></p>
+      <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 13px;">  myjobmag_jobs &lt;- function(base_url, max_pages = 7, days_back = 7) {
+    # Automated scraping with pagination and error handling
+    # Returns cleaned, deduplicated job data as a tibble
+  }</pre>
+
+      <p><strong>Title Parsing:</strong></p>
+      <pre style="background: #f5f5f5; padding: 10px; border-radius: 5px; overflow-x: auto; font-size: 13px;">  # Extract company from "Job Title at Company Name"
+  if (str_detect(title, " at ")) {
+    parts &lt;- str_split(title, " at ", simplify = TRUE)
+    job_title &lt;- str_trim(parts[1])
+    company &lt;- str_trim(parts[2])
+  }</pre>
+
+      <hr>
+
+      <h3 class="anchored">📸 Dashboard Preview</h3>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0;">
+        <img src="images/myjobmag_dashboard.png" alt="MyJobMag Dashboard Screenshot" style="width: 100%; max-width: 600px; border-radius: 8px; border: 1px solid #ddd;">
+      </div>
+
+      <p><strong>Key Views:</strong></p>
+      <ul>
+        <li><strong>Overview Dashboard</strong> – KPI cards and trend charts</li>
+        <li><strong>Job Listings</strong> – Searchable, sortable data table</li>
+        <li><strong>Word Cloud</strong> – Visual analysis of job title keywords</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🚀 Impact</h3>
+
+      <ul>
+        <li><strong>Eliminated manual scrolling</strong> – Jobs are automatically collected and displayed</li>
+        <li><strong>Chronological sorting</strong> – Always see the latest jobs first</li>
+        <li><strong>Time savings</strong> – Reduced job search time from hours to minutes</li>
+        <li><strong>Better insights</strong> – Visualize hiring trends and identify top employers</li>
+        <li><strong>Open-source solution</strong> – Built entirely with free R packages</li>
+        <li><strong>Scalable framework</strong> – Can be adapted to other job websites</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">📋 Future Enhancements</h3>
+
+      <ul>
+        <li>Add email alerts for new jobs matching keywords</li>
+        <li>Scrape individual job pages for more details (salary, location)</li>
+        <li>Schedule daily automated scraping with cron</li>
+        <li>Add job application tracking feature</li>
+        <li>Integrate with job application database</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">📚 Lessons Learned</h3>
+
+      <ul>
+        <li><strong>Web scraping requires understanding HTML structure</strong> – Every website is different</li>
+        <li><strong>Respect website terms</strong> – Add delays between requests to be a good web citizen</li>
+        <li><strong>Handle errors gracefully</strong> – Websites change, so build robust error handling</li>
+        <li><strong>Clean data matters</strong> – Job titles need parsing to extract meaningful information</li>
+        <li><strong>Interactive dashboards make data useful</strong> – Visualizations help spot trends</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🔗 Live Resources</h3>
+
+      <p>
+        <a href="https://roymwavita.shinyapps.io/myjobmag_webscraping/" target="_blank">
+           📊 View Live Dashboard
+        </a>
+      </p>
+
+      <p>
+        <a href="https://roy-mwavita0.github.io/portfolio/thread.html?id=web-scraping-myjobmag" target="_blank">
+           📄 View Full Project Documentation
+        </a>
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Modal 0: Binti Imara -->
   <div id="bintiImaraModal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal('bintiImaraModal')">×</span>
-  
+
       <h2 class="anchored">📈 Scalable M&amp;E System for NGO Impact</h2>
-  
+
       <p><strong>Project Type:</strong> Digital Monitoring &amp; Evaluation System</p>
-  
+
       <p><strong>Status:</strong> 🟢 Live Demonstration Project</p>
-  
+
       <p><strong>Tools &amp; Technologies:</strong>
         KoBoToolbox, KoBo API, R, robotoolbox, tidyverse, dplyr,
         Shiny, shinyapps.io, GitHub
       </p>
-  
+
       <hr>
-  
+
       <h3 class="anchored">🧠 Problem Statement</h3>
-  
+
       <p>
         Small NGOs and community-based organizations often rely on
         disconnected spreadsheets, manual reporting processes,
@@ -563,29 +786,29 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         result in delayed reporting, duplicate records,
         poor data quality, and limited visibility into program performance.
       </p>
-  
+
       <hr>
-  
+
       <h3 class="anchored">🎯 Solution</h3>
-  
+
       <p>
         I designed and deployed an automated Monitoring &amp;
         Evaluation ecosystem that connects data collection,
         storage, processing, analysis, and reporting into a
         single reproducible workflow.
       </p>
-  
+
       <p>
         The system eliminates manual data downloads by pulling
         submissions directly from KoBoToolbox through its API,
         processing data in R, and displaying real-time insights
         through an interactive Shiny dashboard.
       </p>
-  
+
       <hr>
-  
+
       <h3 class="anchored">⚙️ System Architecture</h3>
-  
+
       <ul>
         <li>📱 KoBoToolbox – Offline mobile data collection</li>
         <li>☁️ KoBo API – Automated data retrieval</li>
@@ -594,30 +817,30 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         <li>📈 Shiny Dashboard – Real-time monitoring</li>
         <li>🚀 shinyapps.io – Cloud deployment</li>
       </ul>
-  
+
       <hr>
-  
+
       <h3 class="anchored">🗂️ Data Collection System</h3>
-  
+
       <p>
         The project uses three integrated KoBoToolbox forms:
       </p>
-  
+
       <ul>
         <li>Registry Form – Beneficiary enrollment</li>
         <li>Screening Form – Vulnerability assessment</li>
         <li>Intervention Tracking Form – Service delivery monitoring</li>
       </ul>
-  
+
       <p>
         Data entered through the forms is automatically synchronized
         and processed without requiring manual exports.
       </p>
-  
+
       <hr>
-  
+
       <h3 class="anchored">📊 Dashboard Outputs</h3>
-  
+
       <ul>
         <li>Active beneficiaries</li>
         <li>Vulnerability scoring</li>
@@ -626,13 +849,13 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         <li>Real-time monitoring indicators</li>
         <li>Automated reporting summaries</li>
       </ul>
-      
+
       <img src="images/bii_worflow.png" alt="Binti Imara Workflow">
-  
+
       <hr>
-  
+
       <h3 class="anchored">🚀 Impact</h3>
-  
+
       <ul>
         <li>Reduced reporting workload through automation</li>
         <li>Improved data quality using built-in validation</li>
@@ -640,128 +863,128 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
         <li>Provided a low-cost M&amp;E solution for NGOs and CBOs</li>
         <li>Demonstrated a scalable digital data ecosystem using open-source tools</li>
       </ul>
-  
+
       <hr>
-  
+
       <h3 class="anchored">🔗 Live Resources</h3>
-  
+
       <p>
         <a href="https://roymwavita.shinyapps.io/dashboard_app//" target="_blank">
            📊 View Live Dashboard
         </a>
       </p>
-  
+
       <p>
         <a href="https://rpubs.com/roy_mwavita/1442393" target="_blank">
            📄 View Full Project Portfolio
         </a>
       </p>
-  
+
     </div>
   </div>
-    
-    <!-- Modal 1: Job Hugging -->
-    <div id="jobHuggingModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('jobHuggingModal')">×</span>
-        <h2 class="anchored">📊 Labor Market Uncertainty and Employment Retention: "Job Hugging"</h2>
-        <p><strong>Project Type:</strong> Applied Labor Economics &amp; Behavioral Data Science Case Study</p>
-        <p><strong>Status:</strong> 🟡 Data Collection &amp; Modeling in Progress | 🟢 Infrastructure Complete</p>
-        <p><strong>Tools &amp; Technologies:</strong> R (tidyverse, psych, stats, ggplot2), R Shiny, KoboToolbox API, World Bank &amp; ILOSTAT APIs</p>
-        
-        <hr>
-        
-        <h3 class="anchored">🗺️ Production Artifacts &amp; Live System Architecture</h3>
-        <p>
-          This pipeline is engineered as an automated data product. The data collection layout and operational tracking system are deployed up front to handle streaming field entries cleanly without manual intervention.
-        </p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
-          <div>
-            <h4 style="color: var(--brand-orange); margin-top: 0; font-size:15px;" class="anchored">📋 Primary Data Collection Tool</h4>
-            <img src="images/labour_kobo_form.png" alt="KoboToolbox Survey Collection Instrument" width="100%">
-            <p style="font-size: 13px; line-height: 1.4; margin-top:8px;"><em>Mobile-responsive tool engineered via KoboToolbox. Deploys tailored constraints and logic forks across sector paths (Tech, Retail, and NGOs) to secure structural integrity before collection. <a href="https://ee.kobotoolbox.org/x/VfVIo7wc/" target="_blank">Link to survey form</a></em></p>
-          </div>
-          <div>
-            <h4 style="color: var(--brand-orange); margin-top: 0; font-size:15px;" class="anchored">🖥️ Live Survey Tracking Dashboard</h4>
-            <img src="images/survey_tracker.png" alt="R Shiny Data Tracking System" width="100%">
-            <p style="font-size: 13px; line-height: 1.4; margin-top:8px;">
-              <em>
-                Real-time monitoring system
-                styled with the <code>fresh</code> theme engine. Features customized <code>ggplot2</code> visual frameworks and maps metrics dynamically via direct API callbacks.
-                <a href="https://roymwavita.shinyapps.io/survey_tracker/" target="_blank">Link to dashboard</a> 
-              </em>
-            </p>
-          </div>
-        </div>
-        
-        <hr>
-        
-        <h3 class="anchored">🧠 Problem Statement</h3>
-        <p>
-          Modern labor markets are experiencing a structural paradox: while widespread workplace dissatisfaction remains documented, voluntary job mobility is declining across multiple core industries. This study investigates this emerging behavioral pattern—empirically operationalized as <strong>"Job Hugging"</strong>—where workers choose to remain in their current roles despite actively considering alternative employment, driven by compounding macroeconomic anxiety and asymmetric household financial constraints.
-        </p>
-        
-        <hr>
-        
-        <h3 class="anchored">🧪 Methodology &amp; Measurement Instruments</h3>
-        <p>
-          This quantitative cross-sectional behavioral study integrates validated primary psychometric measurement sub-scales with structural secondary macroeconomic indicators:
-        </p>
-        <ul>
-          <li><strong>Job Satisfaction:</strong> Measured via the Brayfield-Rothe 5-item scale variables (<code>js1</code> to <code>js5</code>).</li>
-          <li><strong>Job Insecurity:</strong> Tracked via the De Witte 4-item scale indicators (<code>ji1</code> to <code>ji4</code>).</li>
-          <li><strong>Perceived Employability:</strong> Operationalized via the Rothwell &amp; Arnold scale variables (<code>pe1</code> to <code>pe4</code>).</li>
-          <li><strong>Financial Buffering:</strong> Modeled using numerical dependent ratios (<code>income_dependents</code>) and categorical timelines (<code>emergency_buffer</code>).</li>
-        </ul>
-        
-        <hr>
-        
-        <h3 class="anchored">⚙️ Data Engineering &amp; Econometric Framework</h3>
-        <ul>
-          <li><strong>Pipeline Automation:</strong> Configured programmatic API calls via <code>robotoolbox</code> to completely eliminate raw CSV exports, processing row binding algorithms live in workspace memory.</li>
-          <li><strong>Psychometric Validation:</strong> Integrated scale verification via the <code>psych</code> library to compute Cronbach's alpha coefficients, enforcing a strict internal reliability threshold of alpha ≥ 0.70.</li>
-          <li><strong>Model Specification:</strong> Implemented a <strong>Binary Logistic Regression Model</strong> estimating the log-odds probability of voluntary job mobility over a 12-month window against composite psychological scores and structural cross-country unemployment records.</li>
-        </ul>
-        
-        <hr>
-        
-        <h3 class="anchored">🚀 Strategic Expected Impact</h3>
-        <ul>
-          <li>Empirically bridges macro-level labor marketplace constraints with micro-level worker sentiment realities.</li>
-          <li>Enables human resource professionals and policy researchers to cleanly differentiate between positive retention and security-driven talent lock-in.</li>
-          <li>Deploys an automated, production-ready pipeline architecture highlighting an end-to-end data product lifecycle.</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- Modal 2: Validation Package -->
-    <div id="pkgModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('pkgModal')">×</span>
-        <h2 class="anchored">🛠️ validationcheck: Function-Based Data Validation Framework</h2>
-        <p><strong>Project Type:</strong> R Package for Data Quality Validation</p>
-        <p><strong>Status:</strong> In Development</p>
-        <p><strong>Tools:</strong> R, tidyverse, dplyr, testthat, GitHub</p>
-        
-        <hr>
-        
-        <h3 class="anchored">🧠 Problem Statement</h3>
-        <p>
-          Data validation in real-world monitoring and evaluation workflows is often fragmented, with analysts writing repetitive scripts for missing values, duplicates, invalid ranges, and logical inconsistencies. Existing tools such as <strong>pointblank</strong> provide powerful validation pipelines, but they require structured setup that can slow down rapid analysis in field-based environments.
-        </p>
-        
-        <hr>
-        
-        <h3 class="anchored">🎯 Solution</h3>
-        <p>
-          <code>validationcheck</code> introduces a function-based validation system that allows users to define and execute validation rules in a simple, readable pipeline while tracking summaries, failure rates, and severity classifications (GOOD, WARNING, CRITICAL).
-        </p>
-        
-        <hr>
-        
-        <h3 class="anchored">⚙️ Core Function: add_validation()</h3>
-        <pre style="background: #f4f4f4; padding: 1rem; border-radius: 8px; font-size: 13px; overflow-x: auto;">add_validation(
+  <!-- Modal 1: Job Hugging -->
+  <div id="jobHuggingModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('jobHuggingModal')">×</span>
+      <h2 class="anchored">📊 Labor Market Uncertainty and Employment Retention: "Job Hugging"</h2>
+      <p><strong>Project Type:</strong> Applied Labor Economics &amp; Behavioral Data Science Case Study</p>
+      <p><strong>Status:</strong> 🟡 Data Collection &amp; Modeling in Progress | 🟢 Infrastructure Complete</p>
+      <p><strong>Tools &amp; Technologies:</strong> R (tidyverse, psych, stats, ggplot2), R Shiny, KoboToolbox API, World Bank &amp; ILOSTAT APIs</p>
+
+      <hr>
+
+      <h3 class="anchored">🗺️ Production Artifacts &amp; Live System Architecture</h3>
+      <p>
+        This pipeline is engineered as an automated data product. The data collection layout and operational tracking system are deployed up front to handle streaming field entries cleanly without manual intervention.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
+        <div>
+          <h4 style="color: var(--brand-orange); margin-top: 0; font-size:15px;" class="anchored">📋 Primary Data Collection Tool</h4>
+          <img src="images/labour_kobo_form.png" alt="KoboToolbox Survey Collection Instrument" width="100%">
+          <p style="font-size: 13px; line-height: 1.4; margin-top:8px;"><em>Mobile-responsive tool engineered via KoboToolbox. Deploys tailored constraints and logic forks across sector paths (Tech, Retail, and NGOs) to secure structural integrity before collection. <a href="https://ee.kobotoolbox.org/x/VfVIo7wc/" target="_blank">Link to survey form</a></em></p>
+        </div>
+        <div>
+          <h4 style="color: var(--brand-orange); margin-top: 0; font-size:15px;" class="anchored">🖥️ Live Survey Tracking Dashboard</h4>
+          <img src="images/survey_tracker.png" alt="R Shiny Data Tracking System" width="100%">
+          <p style="font-size: 13px; line-height: 1.4; margin-top:8px;">
+            <em>
+              Real-time monitoring system
+              styled with the <code>fresh</code> theme engine. Features customized <code>ggplot2</code> visual frameworks and maps metrics dynamically via direct API callbacks.
+              <a href="https://roymwavita.shinyapps.io/survey_tracker/" target="_blank">Link to dashboard</a> 
+            </em>
+          </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3 class="anchored">🧠 Problem Statement</h3>
+      <p>
+        Modern labor markets are experiencing a structural paradox: while widespread workplace dissatisfaction remains documented, voluntary job mobility is declining across multiple core industries. This study investigates this emerging behavioral pattern—empirically operationalized as <strong>"Job Hugging"</strong>—where workers choose to remain in their current roles despite actively considering alternative employment, driven by compounding macroeconomic anxiety and asymmetric household financial constraints.
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">🧪 Methodology &amp; Measurement Instruments</h3>
+      <p>
+        This quantitative cross-sectional behavioral study integrates validated primary psychometric measurement sub-scales with structural secondary macroeconomic indicators:
+      </p>
+      <ul>
+        <li><strong>Job Satisfaction:</strong> Measured via the Brayfield-Rothe 5-item scale variables (<code>js1</code> to <code>js5</code>).</li>
+        <li><strong>Job Insecurity:</strong> Tracked via the De Witte 4-item scale indicators (<code>ji1</code> to <code>ji4</code>).</li>
+        <li><strong>Perceived Employability:</strong> Operationalized via the Rothwell &amp; Arnold scale variables (<code>pe1</code> to <code>pe4</code>).</li>
+        <li><strong>Financial Buffering:</strong> Modeled using numerical dependent ratios (<code>income_dependents</code>) and categorical timelines (<code>emergency_buffer</code>).</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">⚙️ Data Engineering &amp; Econometric Framework</h3>
+      <ul>
+        <li><strong>Pipeline Automation:</strong> Configured programmatic API calls via <code>robotoolbox</code> to completely eliminate raw CSV exports, processing row binding algorithms live in workspace memory.</li>
+        <li><strong>Psychometric Validation:</strong> Integrated scale verification via the <code>psych</code> library to compute Cronbach's alpha coefficients, enforcing a strict internal reliability threshold of alpha ≥ 0.70.</li>
+        <li><strong>Model Specification:</strong> Implemented a <strong>Binary Logistic Regression Model</strong> estimating the log-odds probability of voluntary job mobility over a 12-month window against composite psychological scores and structural cross-country unemployment records.</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🚀 Strategic Expected Impact</h3>
+      <ul>
+        <li>Empirically bridges macro-level labor marketplace constraints with micro-level worker sentiment realities.</li>
+        <li>Enables human resource professionals and policy researchers to cleanly differentiate between positive retention and security-driven talent lock-in.</li>
+        <li>Deploys an automated, production-ready pipeline architecture highlighting an end-to-end data product lifecycle.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Modal 2: Validation Package -->
+  <div id="pkgModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('pkgModal')">×</span>
+      <h2 class="anchored">🛠️ validationcheck: Function-Based Data Validation Framework</h2>
+      <p><strong>Project Type:</strong> R Package for Data Quality Validation</p>
+      <p><strong>Status:</strong> In Development</p>
+      <p><strong>Tools:</strong> R, tidyverse, dplyr, testthat, GitHub</p>
+
+      <hr>
+
+      <h3 class="anchored">🧠 Problem Statement</h3>
+      <p>
+        Data validation in real-world monitoring and evaluation workflows is often fragmented, with analysts writing repetitive scripts for missing values, duplicates, invalid ranges, and logical inconsistencies. Existing tools such as <strong>pointblank</strong> provide powerful validation pipelines, but they require structured setup that can slow down rapid analysis in field-based environments.
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">🎯 Solution</h3>
+      <p>
+        <code>validationcheck</code> introduces a function-based validation system that allows users to define and execute validation rules in a simple, readable pipeline while tracking summaries, failure rates, and severity classifications (GOOD, WARNING, CRITICAL).
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">⚙️ Core Function: add_validation()</h3>
+      <pre style="background: #f4f4f4; padding: 1rem; border-radius: 8px; font-size: 13px; overflow-x: auto;">add_validation(
   agent,
   label,
   columns,
@@ -769,97 +992,97 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
   preconditions = NULL,
   check
 )
-        </pre>
-        
-        <hr>
-        
-        <h3 class="anchored">📊 System Outputs</h3>
-        <p><strong>Severity Rules:</strong><br>GOOD: 0% – 2% failure | WARNING: 2% – 20% failure | CRITICAL: &gt; 20% failure</p>
-        <img src="images/validationcheck.png" alt="Report output" width="100%">
-        
-        <hr>
-        
-        <p style="margin-top: 1.5rem;">
-          <a href="https://github.com/roy-mwavita0/validationcheck" target="_blank">
-            📦 View Package on GitHub →
-          </a>
-        </p>
-      </div>
-    </div>
+      </pre>
 
-    <!-- Modal 3: Geospatial Analysis -->
-    <div id="chpModal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('chpModal')">×</span>
-        <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
-        <p><strong>Organization:</strong> Council of Imams and Preachers of Kenya (CIPK) Taita Taveta Branch – USAID TUJITEGEMEE Project</p>
-        <p><strong>Type:</strong> Community Health Systems Strengthening &amp; Geospatial Analysis</p>
-        <p><strong>Tools:</strong> R, Shiny, Leaflet, KoboToolbox, dplyr, Excel</p>
-        
-        <hr>
-        
-        <h3 class="anchored">🧠 Problem Statement</h3>
-        <p>
-          During an OVC household validation exercise, program teams identified challenges related to the geographical distribution of households supported by Community Health Promoters (CHPs). Some CHPs were supporting households located far from their areas of operation, while others experienced overlapping household assignments. These inefficiencies affected case management, follow-up visits, and service delivery.
-        </p>
-        
-        <hr>
-        
-        <h3 class="anchored">🧪 Methodology</h3>
-        <ul>
-          <li>Designed and deployed a KoboToolbox survey to collect CHP geolocation data.</li>
-          <li>Integrated household geolocation records collected during beneficiary validation exercises.</li>
-          <li>Cleaned and processed data using R.</li>
-          <li>Conducted geospatial analysis using Leaflet to map CHP and household locations.</li>
-          <li>Identified overlapping coverage areas and household assignment gaps.</li>
-          <li>Developed an interactive map to support evidence-based decision making.</li>
-        </ul>
-        
-        <hr>
-        
-        <h3 class="anchored">🗺️ Project Workflow</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
-          <div>
-            <h4 style="color: var(--brand-orange); font-size:15px; margin-bottom:8px;" class="anchored">Data Collection</h4>
-            <img src="images/chp_kobo.png" alt="KoboToolbox survey" width="100%">
-            <p style="font-size:13px; margin-top:6px; color:#666;"><em>Geolocation survey developed in KoboToolbox and used to collect Community Health Promoter location data.</em></p>
-          </div>
-          <div>
-            <h4 style="color: var(--brand-orange); font-size:15px; margin-bottom:8px;" class="anchored">Analytical Output</h4>
-            <img src="images/map_output.png" alt="Geospatial analysis output" width="100%">
-            <p style="font-size:13px; margin-top:6px; color:#666;"><em>Interactive map showing CHP and household distribution used to identify overlaps and service coverage gaps.</em></p>
-          </div>
-        </div>
-        
-        <hr>
-        
-        <h3 class="anchored">📊 Key Findings</h3>
-        <ul>
-          <li>Household assignments were not always aligned with the nearest CHP.</li>
-          <li>Several households overlapped across CHP coverage areas.</li>
-          <li>Significant variation existed in household distribution among CHPs.</li>
-          <li>Distance between CHPs and households affected service delivery efficiency.</li>
-        </ul>
-        
-        <hr>
-        
-        <h3 class="anchored">🚀 Outcome</h3>
-        <ul>
-          <li>Improved visibility of CHP household coverage areas.</li>
-          <li>Supported evidence-based household realignment decisions.</li>
-          <li>Strengthened planning and resource allocation for OVC case management.</li>
-          <li>Demonstrated the value of geospatial analytics for community health programming.</li>
-        </ul>
-      </div>
-    </div>
+      <hr>
 
+      <h3 class="anchored">📊 System Outputs</h3>
+      <p><strong>Severity Rules:</strong><br>GOOD: 0% – 2% failure | WARNING: 2% – 20% failure | CRITICAL: &gt; 20% failure</p>
+      <img src="images/validationcheck.png" alt="Report output" width="100%">
+
+      <hr>
+
+      <p style="margin-top: 1.5rem;">
+        <a href="https://github.com/roy-mwavita0/validationcheck" target="_blank">
+          📦 View Package on GitHub →
+        </a>
+      </p>
+    </div>
   </div>
-  
-  <hr>
+
+  <!-- Modal 3: Geospatial Analysis -->
+  <div id="chpModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('chpModal')">×</span>
+      <h2 class="anchored">📌 Strengthening Community Health Promoter Systems through Geospatial Mapping</h2>
+      <p><strong>Organization:</strong> Council of Imams and Preachers of Kenya (CIPK) Taita Taveta Branch – USAID TUJITEGEMEE Project</p>
+      <p><strong>Type:</strong> Community Health Systems Strengthening &amp; Geospatial Analysis</p>
+      <p><strong>Tools:</strong> R, Shiny, Leaflet, KoboToolbox, dplyr, Excel</p>
+
+      <hr>
+
+      <h3 class="anchored">🧠 Problem Statement</h3>
+      <p>
+        During an OVC household validation exercise, program teams identified challenges related to the geographical distribution of households supported by Community Health Promoters (CHPs). Some CHPs were supporting households located far from their areas of operation, while others experienced overlapping household assignments. These inefficiencies affected case management, follow-up visits, and service delivery.
+      </p>
+
+      <hr>
+
+      <h3 class="anchored">🧪 Methodology</h3>
+      <ul>
+        <li>Designed and deployed a KoboToolbox survey to collect CHP geolocation data.</li>
+        <li>Integrated household geolocation records collected during beneficiary validation exercises.</li>
+        <li>Cleaned and processed data using R.</li>
+        <li>Conducted geospatial analysis using Leaflet to map CHP and household locations.</li>
+        <li>Identified overlapping coverage areas and household assignment gaps.</li>
+        <li>Developed an interactive map to support evidence-based decision making.</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🗺️ Project Workflow</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0;">
+        <div>
+          <h4 style="color: var(--brand-orange); font-size:15px; margin-bottom:8px;" class="anchored">Data Collection</h4>
+          <img src="images/chp_kobo.png" alt="KoboToolbox survey" width="100%">
+          <p style="font-size:13px; margin-top:6px; color:#666;"><em>Geolocation survey developed in KoboToolbox and used to collect Community Health Promoter location data.</em></p>
+        </div>
+        <div>
+          <h4 style="color: var(--brand-orange); font-size:15px; margin-bottom:8px;" class="anchored">Analytical Output</h4>
+          <img src="images/map_output.png" alt="Geospatial analysis output" width="100%">
+          <p style="font-size:13px; margin-top:6px; color:#666;"><em>Interactive map showing CHP and household distribution used to identify overlaps and service coverage gaps.</em></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3 class="anchored">📊 Key Findings</h3>
+      <ul>
+        <li>Household assignments were not always aligned with the nearest CHP.</li>
+        <li>Several households overlapped across CHP coverage areas.</li>
+        <li>Significant variation existed in household distribution among CHPs.</li>
+        <li>Distance between CHPs and households affected service delivery efficiency.</li>
+      </ul>
+
+      <hr>
+
+      <h3 class="anchored">🚀 Outcome</h3>
+      <ul>
+        <li>Improved visibility of CHP household coverage areas.</li>
+        <li>Supported evidence-based household realignment decisions.</li>
+        <li>Strengthened planning and resource allocation for OVC case management.</li>
+        <li>Demonstrated the value of geospatial analytics for community health programming.</li>
+      </ul>
+    </div>
+  </div>
+
+</div> <!-- END content-showcase -->
+
+<hr>
 <div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
   <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
-</div>
+</div> <!-- END portfolio-container -->
 
 
 <script id="quarto-html-after-body" type="application/javascript">
