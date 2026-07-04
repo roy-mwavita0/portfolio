@@ -1,5 +1,26 @@
 {
   "threads": [
+    
+    
+        {
+      "id": "leave-inventory-tracker",
+      "title": "Learning to Building a Leave & Inventory Tracker",
+      "emoji": ">_",
+      "tags": [
+        "R", "Google Sheets", "Kobo Toolbox", "Supabase"
+      ],
+      "entries": [
+        {
+          "date": "Date: 2026-07-04 Time: 0704HRS",
+          "heading": "The Idea",
+          "content": "The goal here is to build a leave and inventory tracker. \n\nYears back a Program Manager asked me to build a simple one, which I did, but I wasn't happy with it. Luckily, the Program Manager didn't ask me again. Now, it's something I want to solve at the organization I'm volunteering at."
+        }
+      ]
+    },
+
+
+
+    
     {
       "id": "web-scraping-myjobmag",
       "title": "Learning Web Scraping with R: Scraping MyJobMag",
@@ -112,10 +133,14 @@
         }
       ]
     },
+    
+    
+    
+    
     {
-      "id": "learning-r-skills",
-      "title": "Learning R Skills",
-      "emoji": "📊",
+      "id": "map_function",
+      "title": "Learning Map Function",
+      "emoji": "{ }",
       "tags": [
         "R",
         "tidyverse",
