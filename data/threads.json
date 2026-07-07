@@ -228,17 +228,17 @@
       ],
       "entries": [
         {
-          "date": "2026-05-10 T07:30",
+          "date": "2025-05-10 T07:30",
           "heading": "Part 1 — Getting past base R",
           "content": "I use R daily for M&E work but mostly stick to a handful of functions I already know. Starting this thread to push further into the tidyverse properly — dplyr verbs, piping, and writing cleaner data-cleaning pipelines instead of copy-pasted base R.\n\nToday: rewrote an old data-cleaning script using dplyr's mutate, filter, and group_by. Half the length, twice as readable."
         },
         {
-          "date": "2026-06-01 T21:15",
+          "date": "2025-06-01 T21:15",
           "heading": "Part 2 — Functions and iteration with purrr",
           "content": "Moved on to purrr this week. Been manually copy-pasting the same cleaning steps across multiple datasets for months, which is exactly what map() is for.\n\nWrote my first proper function that takes a raw KoboToolbox export and returns a cleaned tibble, then applied it across a folder of exports with map_dfr(). Saved me a genuinely embarrassing amount of manual work."
         },
         {
-          "date": "2026-07-08 T13:52",
+          "date": "2025-07-08 T13:52",
           "heading": "Part 3 — A small map_dfr example",
           "content": "Here's a stripped-down version of the pattern I've been using:\n\n```r\nclean_export <- function(path) {\n  readr::read_csv(path) |>\n    dplyr::filter(!is.na(respondent_id)) |>\n    dplyr::mutate(district = stringr::str_to_title(district))\n}\n\nfiles <- list.files(\"exports\", full.names = TRUE)\nall_clean <- purrr::map_dfr(files, clean_export)\nnrow(all_clean)\n```\n\nAnd what it printed when I ran it on this week's batch:\n\n```output\n[1] 842\n```\n\n842 clean rows across 6 files, versus the ~40 minutes this used to take by hand."
         }
