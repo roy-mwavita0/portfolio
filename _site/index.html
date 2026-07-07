@@ -80,6 +80,8 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     box-sizing: border-box;
   }
 
+  html, body { overflow-x: hidden; max-width: 100%; }
+
   body {
     font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
     background: var(--bg-cream);
@@ -97,6 +99,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
       grid-template-columns: 1.2fr 3.8fr;
     }
   }
+  .portfolio-container > * { min-width: 0; }
 
   /* 1/4 Left Panel: Core Profile Branding Sidebar */
   .profile-sidebar {
@@ -167,6 +170,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
   .content-showcase {
     background-color: var(--bg-cream);
     padding: 4rem 3rem;
+    min-width: 0;
   }
 
   @media (max-width: 768px) {
@@ -224,41 +228,65 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     position: relative;
   }
 
-  /* Profile summary card */
-  .profile-summary {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(0,0,0,0.02);
+  /* ---- Hero section ---- */
+  .hero {
+    margin-bottom: 2.75rem;
   }
 
-  .profile-summary .experience-text {
-    color: #444;
+  .hero h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1.3;
+    max-width: 720px;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero .hero-sub {
+    color: #555;
     font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.7;
+    max-width: 620px;
+    margin-bottom: 1.85rem;
   }
 
-  .profile-summary .skills-preview {
+  .hero-ctas {
     display: flex;
     flex-wrap: wrap;
+    gap: 0.9rem;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
     gap: 0.5rem;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   }
 
-  .profile-summary .skill-tag {
-    background: var(--bg-cream);
-    color: #444;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-
-  .profile-summary .skill-tag.highlight {
+  .hero-cta.primary {
     background: var(--brand-orange);
-    color: #ffffff;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(217, 77, 67, 0.25);
+  }
+  .hero-cta.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(217, 77, 67, 0.3);
+  }
+
+  .hero-cta.secondary {
+    background: #ffffff;
+    color: var(--text-dark) !important;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .hero-cta.secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--brand-orange);
+    color: var(--brand-orange) !important;
   }
 
   /* Content Cards */
@@ -285,6 +313,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-width: 0;
   }
 
   .showcase-card:hover {
@@ -318,8 +347,126 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     transition: gap 0.2s;
   }
 
-  /* CV Card */
-  .cv-card {
+  /* ---- Latest Writing carousel ---- */
+  .latest-writing-carousel {
+    position: relative;
+    margin-bottom: 3rem;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel-track { scrollbar-width: none; }
+
+  .latest-post-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.6rem 1.7rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.02);
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    min-width: 0;
+    overflow-wrap: break-word;
+    scroll-snap-align: start;
+    flex: 0 0 calc(50% - 0.75rem);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  @media (max-width: 768px) {
+    .latest-post-card { flex: 0 0 88%; }
+  }
+  .latest-post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  }
+
+  .latest-post-thread {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--brand-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+  }
+
+  .latest-post-card h4 {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .latest-post-card p {
+    font-size: 13px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0.7rem;
+  }
+
+  .latest-post-date {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .latest-writing-empty {
+    color: #888;
+    font-size: 14px;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    color: var(--text-dark);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+  .carousel-arrow:hover { background: var(--brand-orange); color: #fff; border-color: var(--brand-orange); }
+  .carousel-arrow.prev { left: -14px; }
+  .carousel-arrow.next { right: -14px; }
+  @media (max-width: 640px) {
+    .carousel-arrow { display: none; }
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.15);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .carousel-dot.active { background: var(--brand-orange); transform: scale(1.3); }
+
+  /* ---- Currently Building card ---- */
+  .building-card {
     background: #ffffff;
     border-radius: 16px;
     padding: 2rem;
@@ -332,29 +479,35 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     border: 1px solid rgba(0,0,0,0.02);
   }
 
-  .cv-info h3 {
+  .building-info h3 {
     margin: 0 0 0.25rem 0;
     font-size: 1.2rem;
     color: var(--text-dark);
   }
 
-  .cv-info p {
+  .building-info p {
     margin: 0;
     color: #666666;
     font-size: 14px;
   }
 
-  .cv-btn {
-    background: var(--brand-orange);
-    color: #ffffff !important;
-    text-decoration: none;
-    padding: 10px 24px;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 14px;
-    transition: background 0.2s, transform 0.2s;
-    box-shadow: 0 4px 10px rgba(217, 77, 67, 0.2);
-    display: inline-block;
+  .coming-soon-badge {
+    background: var(--bg-cream);
+    color: var(--brand-orange);
+    border: 1px solid rgba(217, 77, 67, 0.3);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.1);
   }
 </style>
 <div class="portfolio-container">
@@ -362,7 +515,7 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
     <div class="avatar-frame">
       <img src="images/roy.jpg" alt="Roy Mwavita">
     </div>
-    
+
     <h1>Roy Mwavita</h1>
     <h4 class="anchored">Research Data Analyst • Monitoring &amp; Evaluation Specialist</h4>
 
@@ -371,11 +524,11 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
       <a href="https://www.linkedin.com/in/roy-mwavita-495b50220/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="mailto:lennicroy@gmail.com"><i class="fas fa-envelope"></i></a>
     </div>
-    
+
   </div>
 
   <div class="content-showcase">
-    
+
     <nav class="sidebar-nav">
       <a href="./index.html" class="active"><i class="fas fa-home"></i> Home</a>
       <a href="./projects.html"><i class="fas fa-project-diagram"></i> Projects</a>
@@ -383,65 +536,226 @@ gtag('config', 'G-XNMP9FSHZH', { 'anonymize_ip': true});
       <a href="./notes.html"><i class="fas fa-paper-plane"></i> Blog</a>
     </nav>
 
-    <!-- Profile Summary - Moved to top -->
-    <div class="profile-summary">
-      <div class="experience-text">
-        <strong>2+ years</strong> of experience turning program data into actionable insights for public health, research and development programs. Passionate about building data systems that drive impact in communities.
-      </div>
-      <div class="skills-preview">
-        <span class="skill-tag highlight">R</span>
-        <span class="skill-tag">R Shiny</span>
-        <span class="skill-tag">Quarto</span>
-        <span class="skill-tag">KoboToolbox</span>
-        <span class="skill-tag">ODK</span>
-        <span class="skill-tag">RedCap</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">M&amp;E Frameworks</span>
-      </div>
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Supporting NGOs, humanitarian organizations, public health programs, and researchers through modern data systems and evidence-driven decision-making.</h1>
     </div>
 
     <div class="showcase-section-title">Featured Areas</div>
-    
+
     <div class="showcase-grid">
       <div class="showcase-card">
         <div>
           <h3 class="anchored">🧩 Projects</h3>
           <p>Data systems, automation tools, and analytics solutions developed for health and development programs.</p>
-          
-          <!-- Recent project preview -->
         </div>
         <a href="./projects.html" class="explore-link">Explore →</a>
       </div>
 
       <div class="showcase-card">
         <div>
-          <h3 class="anchored">✍️ Blog</h3>
-          <p>Learning threads, tutorials, and reflections on data analytics, R programming, and MEAL workflows.</p>
-          
-          <!-- Recent blog preview -->
+          <h3 class="anchored">✍️ Learning Threads / Blog</h3>
+          <p>Running threads on things I'm learning — data analytics, R programming, and MEAL workflows, updated as I go.</p>
         </div>
         <a href="./notes.html" class="explore-link">Explore →</a>
       </div>
     </div>
 
+    <div class="showcase-section-title">Latest Writing</div>
+
+    <div class="latest-writing-carousel">
+      <button class="carousel-arrow prev" id="latest-prev" aria-label="Previous">‹</button>
+      <div class="carousel-track" id="latest-writing-track">
+        <p class="latest-writing-empty">Loading latest posts…</p>
+      </div>
+      <button class="carousel-arrow next" id="latest-next" aria-label="Next">›</button>
+    </div>
+    <div class="carousel-dots" id="latest-writing-dots"></div>
+
     <hr>
 
-    <div class="cv-card">
-      <div class="cv-info">
-        <h3 class="anchored">📄 CV / Resume</h3>
-        <p>Download my detailed CV for a complete overview of experience, certifications, and publications.</p>
+    <div class="building-card">
+      <div class="building-info">
+        <h3 class="anchored">🛠️ Currently Building</h3>
+        <p><strong>validationcheck</strong> — a data quality validation tool for survey and program data.</p>
       </div>
-      <a href="files/CV_Roy Mwavita.pdf" class="cv-btn" target="_blank">
-        <i class="fas fa-download"></i> Download CV
-      </a>
+      <span class="coming-soon-badge">Coming Soon</span>
     </div>
   </div>
-  
+
   <hr>
 <div style="text-align: center; padding: 2rem 0; color: #666; font-size: 13px;">
   <i class="fas fa-copyright"></i> 2026 Roy Mwavita | Built with <a href="https://quarto.org" style="color: #d94d43; text-decoration: none;">Quarto</a>
 </div>
 </div>
+<script>
+(function () {
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  // threads.json "date" fields have shown up in a few inconsistent shapes:
+  // "Date: 2026-07-01 Time: 0912HRS" (no colon), "Date: ... Time: 20:14HRS" (colon),
+  // and "2026-07-08 T13:52". Pull the date out first, then look for a time in
+  // whichever shape is present.
+  function extractDate(raw) {
+    const str = String(raw);
+    const dm = str.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!dm) return new Date(0);
+    const y = +dm[1], mo = +dm[2] - 1, da = +dm[3];
+
+    let hh = 0, mm = 0;
+    const colonTime = str.match(/(\d{1,2}):(\d{2})/);
+    const compactTime = str.match(/Time:\s*(\d{2})(\d{2})\s*HRS/i);
+    if (colonTime) {
+      hh = +colonTime[1];
+      mm = +colonTime[2];
+    } else if (compactTime) {
+      hh = +compactTime[1];
+      mm = +compactTime[2];
+    }
+    return new Date(y, mo, da, hh, mm);
+  }
+
+  function fmtDate(dt) {
+    if (isNaN(dt)) return "";
+    const dateStr = dt.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+    if (dt.getHours() === 0 && dt.getMinutes() === 0) return dateStr;
+    const timeStr = dt.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    return `${dateStr} · ${timeStr}`;
+  }
+
+  // Strips markdown/code formatting out of preview text so raw syntax never leaks onto cards
+  function previewText(text) {
+    const hasCode = /```/.test(text);
+    const cleaned = String(text)
+      .replace(/```(\w+)?\n[\s\S]*?```/g, "")
+      .replace(/<[^>]+>/g, "")
+      .replace(/\[(.*?)\]\(.*?\)/g, "$1")
+      .replace(/[*_`#>]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    return cleaned + (hasCode ? "  💻" : "");
+  }
+
+  fetch("data/threads.json")
+    .then((r) => r.json())
+    .then((data) => {
+      const track = document.getElementById("latest-writing-track");
+      const dotsWrap = document.getElementById("latest-writing-dots");
+      const threads = data.threads || [];
+
+      // ---- CHANGED: Show threads, not individual entries ----
+      // Each slide is a THREAD with only the first 2 entries previewed
+      const MAX_THREADS = 8;
+      const slides = [];
+
+      threads.forEach((t) => {
+        const entries = t.entries || [];
+        if (entries.length === 0) return;
+        
+        // Get the latest entry date for sorting
+        const latestEntry = entries[entries.length - 1];
+        const dt = extractDate(latestEntry.date);
+        
+        // Get first 2 entries for preview
+        const previewEntries = entries.slice(0, 2);
+        
+        slides.push({
+          threadId: t.id,
+          threadTitle: t.title,
+          emoji: t.emoji || "🧵",
+          tags: t.tags || [],
+          entryCount: entries.length,
+          latestDate: dt,
+          previewEntries: previewEntries,
+          firstEntry: entries[0],
+          latestEntry: latestEntry
+        });
+      });
+      
+      // Sort by latest entry date (newest first)
+      slides.sort((a, b) => b.latestDate - a.latestDate);
+      slides.splice(MAX_THREADS);
+
+      if (slides.length === 0) {
+        track.innerHTML = '<p class="latest-writing-empty">Nothing posted yet — check back soon.</p>';
+        return;
+      }
+
+      track.innerHTML = slides
+        .map((t) => {
+          // Build preview of first 2 entries
+          const previewHtml = t.previewEntries.map((e, idx) => {
+            const snippet = previewText(e.content);
+            const shortSnippet = snippet.length > 100 ? snippet.slice(0, 100) + "…" : snippet;
+            return `<div style="font-size:13px;color:#888;margin-top:4px;border-left:2px solid var(--brand-orange);padding-left:10px;margin-bottom:6px;">
+              <strong>${idx + 1}.</strong> ${escapeHtml(e.heading)} — ${escapeHtml(shortSnippet)}
+            </div>`;
+          }).join("");
+
+          const tags = (t.tags || [])
+            .slice(0, 3)
+            .map((tag) => `<span style="background:var(--bg-cream);color:#886;font-size:10px;font-weight:600;padding:2px 8px;border-radius:12px;margin-right:4px;">${escapeHtml(tag)}</span>`)
+            .join("");
+
+          return `
+            <a class="latest-post-card" href="thread.html?id=${encodeURIComponent(t.threadId)}">
+              <div class="latest-post-thread">${t.emoji} ${escapeHtml(t.threadTitle)}</div>
+              <div style="margin-bottom:0.5rem;display:flex;flex-wrap:wrap;gap:0.25rem;">${tags}</div>
+              ${previewHtml}
+              <div class="latest-post-date" style="margin-top:0.5rem;">🧵 ${t.entryCount} parts · updated ${escapeHtml(fmtDate(t.latestDate))}</div>
+            </a>`;
+        })
+        .join("");
+
+      // ---- Carousel controls ----
+      const cards = Array.from(track.children);
+      dotsWrap.innerHTML = cards
+        .map((_, i) => `<button class="carousel-dot${i === 0 ? " active" : ""}" data-index="${i}" aria-label="Go to slide ${i + 1}"></button>`)
+        .join("");
+      const dots = Array.from(dotsWrap.children);
+
+      function scrollToCard(i) {
+        const card = cards[i];
+        if (card) track.scrollTo({ left: card.offsetLeft - track.offsetLeft, behavior: "smooth" });
+      }
+
+      dots.forEach((dot, i) => dot.addEventListener("click", () => scrollToCard(i)));
+
+      document.getElementById("latest-prev").addEventListener("click", () => {
+        track.scrollBy({ left: -(cards[0].getBoundingClientRect().width + 24), behavior: "smooth" });
+      });
+      document.getElementById("latest-next").addEventListener("click", () => {
+        track.scrollBy({ left: cards[0].getBoundingClientRect().width + 24, behavior: "smooth" });
+      });
+
+      let scrollTimeout;
+      track.addEventListener("scroll", () => {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+          let closest = 0;
+          let closestDist = Infinity;
+          cards.forEach((card, i) => {
+            const dist = Math.abs(card.offsetLeft - track.offsetLeft - track.scrollLeft);
+            if (dist < closestDist) {
+              closestDist = dist;
+              closest = i;
+            }
+          });
+          dots.forEach((d, i) => d.classList.toggle("active", i === closest));
+        }, 100);
+      });
+    })
+    .catch(() => {
+      document.getElementById("latest-writing-track").innerHTML =
+        '<p class="latest-writing-empty">Couldn\'t load latest posts right now.</p>';
+    });
+})();
+</script>
 
 
 <script id="quarto-html-after-body" type="application/javascript">
