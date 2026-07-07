@@ -171,6 +171,19 @@ page-layout: full
   }
 
   /* ---- Hero section ---- */
+  .hero-quote {
+  border-left: 4px solid #4CAF50; /* green accent */
+  padding-left: 15px;
+  margin: 20px 0;
+  font-style: italic;
+  background-color: #f9f9f9;
+}
+
+.hero-quote h3 {
+  margin: 0;
+  font-weight: normal;
+  color: #333;
+}
   .hero {
     margin-bottom: 2.75rem;
   }
@@ -482,9 +495,12 @@ page-layout: full
     </nav>
 
     <!-- Hero -->
-    <div class="hero">
-      <h1>Supporting NGOs, humanitarian organizations, public health programs, and researchers through modern data systems and evidence-driven decision-making.</h1>
-    </div>
+    <div class="hero-quote">
+  <h3>
+    Supporting NGOs, humanitarian organizations, public health programs, 
+    and researchers through modern data systems and evidence-driven decision-making.
+  </h3>
+</div>
 
     <div class="showcase-section-title">Featured Areas</div>
 
